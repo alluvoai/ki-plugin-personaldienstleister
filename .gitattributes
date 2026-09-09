@@ -1,4 +1,0 @@
-# The operator CHANGELOG grows by prepending under "## [Unreleased]"; every drift PR touches the same
-# lines, so a plain rebase conflicts as soon as one sibling has merged (v0.56.4 and 2026-09-07: 7 of 8
-# PRs were left "for a human"). Union keeps both sides — entries are independent paragraphs.
-plugins/alluvo-operator/CHANGELOG.md merge=union
