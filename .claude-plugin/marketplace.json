@@ -1,0 +1,12 @@
+{
+  "name": "alluvo-marketplace",
+  "owner": {
+    "name": "alluvo Platform Team"
+  },
+  "plugins": [
+    {
+      "name": "alluvo-operator",
+      "source": "./plugins/alluvo-operator"
+    }
+  ]
+}
