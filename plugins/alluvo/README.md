@@ -1,4 +1,4 @@
-# alluvo
+# alluvo – KI-Plugin für Personaldienstleister
 
 Guided workflows for alluvo staffing-agency operators. Version 1.12.1.
 
@@ -12,11 +12,11 @@ not have.
 ## Install
 
 ```
-/plugin marketplace add alluvoai/alluvo-claude-plugins
+/plugin marketplace add alluvoai/ki-plugin-personaldienstleister
 /plugin install alluvo@alluvoai
 ```
 
-In Codex: `codex plugin marketplace add alluvoai/alluvo-claude-plugins` then
+In Codex: `codex plugin marketplace add alluvoai/ki-plugin-personaldienstleister` then
 `codex plugin add alluvo@alluvoai`.
 
 Then connect the bundled MCP server with your alluvo account (OAuth) and pick

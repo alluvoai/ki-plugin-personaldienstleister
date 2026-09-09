@@ -1,20 +1,53 @@
-# alluvo Claude Plugins
+# alluvo – KI-Plugin für Personaldienstleister (Claude, Codex)
 
 🇬🇧 **English version: [README.md](README.md)**
 
-Der offizielle Claude-Plugin-Marketplace von alluvo. Er enthält das Plugin **alluvo**: geführte Workflows für Disposition, Recruiting und Vertrieb auf Basis des alluvo-Assistenten, des alluvo-MCP-Servers.
+**alluvo** ist das KI-Plugin für Personaldienstleister und Zeitarbeitsfirmen. Es macht aus Claude und Codex einen Assistenten, der Disposition, Recruiting, Vertrieb, Verträge, Dienstplan und Stundenfreigabe per Sprache erledigt: direkt in Ihren alluvo-Daten, mit Vorschau vor jedem Schreibzugriff und mit den Prüfungen nach AÜG und ArbZG, die die Branche braucht.
 
-## Voraussetzungen
+## Für wen
 
-- Ein alluvo-Konto in Ihrer Organisation.
-- [Claude Code](https://claude.com/claude-code) (Terminal, Desktop-App oder IDE-Erweiterung), Claude Cowork oder Codex.
-- Netzwerkzugriff auf `https://api.alluvo.ai/mcp`. Der Assistent verbindet sich beim ersten Aufruf per OAuth; es wird nirgends ein Token kopiert.
+- **Disponent:innen** – wer ist verleihfrei, wer passt zu welchem Kundenbedarf, Dienstpläne, Krankmeldungen, Stundenfreigabe.
+- **Recruiter:innen und Personalabteilung** – Onboarding neuer Mitarbeiter, Personalfragebogen, Stammdaten, Einladung in die Mitarbeiter-App.
+- **Vertrieb und BDR** – Profilvertrieb, Zielfirmen im Umkreis, Outreach-Sequenzen, Gesprächsvorbereitung und -nachbereitung.
+- **Geschäftsführung und Teamleitung** – Tagesbriefing, Dispo- und Vertriebsübersicht, Aufgabenverteilung.
 
-## Installation in Claude Code
+## Was Sie sagen können
+
+Die Workflows starten auf natürliche Sätze, Deutsch oder Englisch:
+
+| Sie sagen … | alluvo macht … |
+|---|---|
+| „Wer ist gerade verleihfrei?" | listet Mitarbeiter ohne Einsatz, nach Dringlichkeit, mit Wohnort und Qualifikation |
+| „Finde Einsätze für die Bank" | matcht verleihfreie Mitarbeiter auf Kunden mit Rahmenvertrag und legt Einsatzvertragsentwürfe an |
+| „Verkauf mir den Kandidaten Max Mustermann" | sucht passende Firmen im Umkreis, qualifiziert sie und startet die Outreach-Sequenz |
+| „Neuer Personalbedarf von Klinikum Musterstadt" | erfasst die Anfrage vollständig und schlägt Kandidaten vor |
+| „Dienstplan für Oktober erstellen" | plant die Schichten mit ArbZG-Prüfung und veröffentlicht sie |
+| „Krankmeldung für Frau Beispiel ab Montag" | bucht die Abwesenheit und legt die AU in die Personalakte |
+| „Stundenfreigabe prüfen" | zeigt eingereichte Stunden, Abweichungen und offene Kundenfreigaben |
+| „Rahmenvertrag für die Pflegedienst GmbH anlegen" | erstellt den Vertrag, führt durch die Stufen und verschickt die §11-AÜG-Mitteilung |
+| „Was steht heute an?" | Tagesbriefing aus Terminen, Aufgaben, Outreach-Antworten und Pipeline |
+| „Inbox aufräumen" | triagiert das Team-Postfach, schließt mit Beleg, legt Folgeaufgaben an |
+
+## Alle Workflows
+
+| Bereich | Workflows |
+|---|---|
+| Disposition | `bench-check`, `match-bench-to-clients`, `intake-personalbedarf`, `build-dienstplan`, `record-absence`, `approve-stundenfreigabe`, `head-of-disposition` |
+| Verträge | `manage-contract-lifecycle` |
+| Recruiting und Personal | `onboard-new-employee`, `manage-meta-ads` |
+| Vertrieb | `profilvertrieb`, `prospect-companies`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
+| Service und Datenqualität | `clean-inbox`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
+| Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
+
+Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md). Jeder Workflow lässt sich auch direkt starten, zum Beispiel mit `/alluvo:bench-check`.
+
+## Installation
+
+### Claude Code
 
 1. Marketplace hinzufügen (einmal pro Rechner):
    ```
-   /plugin marketplace add alluvoai/alluvo-claude-plugins
+   /plugin marketplace add alluvoai/ki-plugin-personaldienstleister
    ```
 2. Plugin installieren:
    ```
@@ -25,24 +58,21 @@ Der offizielle Claude-Plugin-Marketplace von alluvo. Er enthält das Plugin **al
    /mcp
    ```
    **alluvo** auswählen, im Browser mit den alluvo-Zugangsdaten anmelden und die Organisation wählen.
-4. Ausprobieren:
-   > Wer ist gerade verleihfrei?
+4. Ausprobieren: „Wer ist gerade verleihfrei?"
 
-   Der Workflow `bench-check` startet, und der Assistent antwortet aus den Daten Ihrer Organisation.
+Aktualisieren: `/plugin marketplace update alluvoai`, danach `/plugin update alluvo@alluvoai`. Die Workflow-Anleitungen selbst liefert der Assistent zur Laufzeit; dafür ist kein Plugin-Update nötig.
 
-**Aktualisieren:** `/plugin marketplace update alluvoai`, danach `/plugin update alluvo@alluvoai`. Die Workflow-Anleitungen selbst liefert der Assistent zur Laufzeit; dafür ist kein Plugin-Update nötig.
-
-## Installation in Claude Cowork
+### Claude Cowork
 
 1. Ein Administrator Ihrer Claude-Organisation öffnet **Organisationseinstellungen → Plugins → Plugin hinzufügen → GitHub** und wählt dieses Repository.
 2. Mitglieder aktivieren **alluvo** in ihrer Plugin-Liste.
 3. Beim ersten Aufruf fragt der Assistent nach der alluvo-Anmeldung (OAuth) und der Organisation.
 
-## Installation in Codex
+### Codex
 
-1. Marketplace hinzufügen (einmal pro Rechner):
+1. Marketplace hinzufügen:
    ```
-   codex plugin marketplace add alluvoai/alluvo-claude-plugins
+   codex plugin marketplace add alluvoai/ki-plugin-personaldienstleister
    ```
 2. Plugin installieren:
    ```
@@ -52,29 +82,29 @@ Der offizielle Claude-Plugin-Marketplace von alluvo. Er enthält das Plugin **al
    ```
    codex mcp login alluvo
    ```
-   Falls der mitgelieferte Server nicht übernommen wird, einmalig von Hand eintragen und danach anmelden:
-   ```
-   codex mcp add alluvo --url https://api.alluvo.ai/mcp
-   ```
+   Falls der mitgelieferte Server nicht übernommen wird, einmalig von Hand eintragen und danach anmelden: `codex mcp add alluvo --url https://api.alluvo.ai/mcp`
 
-## Assistent ohne Plugin nutzen
+### Ohne Plugin
 
-Jeder MCP-Client kann sich direkt verbinden; das Plugin ergänzt nur die geführten Workflows. Claude Desktop, claude.ai und andere Clients nutzen die Connector-URL `https://api.alluvo.ai/mcp`. Details, auch der Weg über ein persönliches Zugriffstoken für Clients ohne OAuth, stehen in der Dokumentation: [Assistenten verbinden](https://docs.alluvo.ai/de/alluvo-mcp/connect).
+Jeder MCP-Client kann sich direkt mit dem alluvo-Assistenten verbinden; das Plugin ergänzt nur die geführten Workflows. Claude Desktop, claude.ai und andere Clients nutzen die Connector-URL `https://api.alluvo.ai/mcp`. Details, auch der Weg über ein persönliches Zugriffstoken: [Assistenten verbinden](https://docs.alluvo.ai/de/alluvo-mcp/connect).
 
-## Was das Plugin kann
+## Sicherheit und Compliance
 
-Die Workflows starten auf natürliche Sätze wie „Wer ist gerade verleihfrei?", „Leg einen Rahmenvertrag für … an" oder „Verkauf mir den Kandidaten …". Der Katalog steht in [`plugins/alluvo/README.md`](plugins/alluvo/README.md).
-
-Die Schritt-für-Schritt-Anleitung zu jedem Workflow liefert der alluvo-Assistent zur Laufzeit. Sie ist damit immer aktuell und richtet sich nach dem Tarif Ihrer Organisation. Ein Workflow außerhalb Ihres Tarifs antwortet mit `MODULE_LOCKED`, nennt den nötigen Tarif und verlinkt die Testphase.
+- **Ihre Daten bleiben bei Ihnen.** Das Plugin enthält keine Daten und keine Anleitungen, nur die Auslöse-Sätze. Alles Weitere liefert der alluvo-Server zur Laufzeit, nach Anmeldung, im Rahmen Ihrer Berechtigungen und nur für Ihre Organisation.
+- **Vorschau vor jedem Schreibzugriff.** Kein Vertrag, keine Schicht, kein Kontakt wird angelegt oder geändert, ohne dass Sie die Vorschau bestätigt haben.
+- **AÜG und ArbZG eingebaut.** Dienstpläne werden gegen Höchstarbeitszeit, Ruhezeiten und Sonntagsarbeit geprüft; Überlassungshöchstdauer, Equal Pay und die §11-Mitteilung sind Teil des Vertrags-Workflows.
+- **Tarifgrenzen sind sichtbar.** Ein Workflow außerhalb Ihres alluvo-Tarifs antwortet mit `MODULE_LOCKED`, nennt den nötigen Tarif und verlinkt die Testphase.
 
 ## Fehlerbehebung
 
 | Symptom | Was tun |
 |---|---|
 | `alluvo … Needs authentication` unter `/mcp` | Über `/mcp` → alluvo anmelden. Tokens laufen ab; eine erneute Anmeldung behebt es. |
-| Ein Workflow startet nicht | Die deutsche oder englische Auslöse-Formulierung aus dem Katalog verwenden oder den Workflow direkt starten: `/alluvo:bench-check`. |
+| Ein Workflow startet nicht | Die Auslöse-Formulierung aus dem Katalog verwenden oder den Workflow direkt starten: `/alluvo:bench-check`. |
 | `MODULE_LOCKED` | Der Workflow gehört zu einem Modul, das Ihre Organisation nicht freigeschaltet hat. Die Meldung nennt den Tarif und verlinkt die Testphase. |
 
-## Support
+## Über alluvo
 
-Ihr alluvo-Ansprechpartner oder die Dokumentation unter [docs.alluvo.ai](https://docs.alluvo.ai/de/alluvo-mcp/connect).
+alluvo ist die Software für Personaldienstleister: Mitarbeiter, Kunden, Verträge, Dienstplanung, Zeiterfassung, Abrechnung und Vertrieb in einem System, mit KI-Assistent und Mitarbeiter-App. Mehr unter [alluvo.de](https://alluvo.de), Dokumentation unter [docs.alluvo.ai](https://docs.alluvo.ai/de).
+
+Support: Ihr alluvo-Ansprechpartner.
