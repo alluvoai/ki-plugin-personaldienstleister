@@ -1,6 +1,6 @@
 {
     "name": "alluvo",
-    "version": "1.12.1",
+    "version": "1.12.2",
     "description": "alluvo – KI-Plugin für Personaldienstleister: Disposition, Recruiting, Verträge, Dienstplan und Stundenfreigabe per Sprache, in Claude und Codex. / AI plugin for German staffing agencies (Personaldienstleister, Zeitarbeit).",
     "author": {
         "name": "alluvo"

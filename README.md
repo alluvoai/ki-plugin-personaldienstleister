@@ -63,7 +63,7 @@ Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md
    **alluvo** auswählen, im Browser mit den alluvo-Zugangsdaten anmelden und die Organisation wählen.
 4. Ausprobieren: „Wer ist gerade verleihfrei?"
 
-Aktualisieren: `/plugin marketplace update alluvoai`, danach `/plugin update alluvo@alluvoai`. Die Workflow-Anleitungen selbst liefert der Assistent zur Laufzeit; dafür ist kein Plugin-Update nötig.
+**Aktualisierung:** Automatische Updates sind für Marketplaces von Drittanbietern **standardmäßig deaktiviert** — Claude Code lädt eine neue Plugin-Version sonst nicht von selbst herunter. Einmal aktivieren unter **`/plugin` → Marketplaces → `alluvoai` → „Enable auto-update"**; danach prüft Claude Code nach jedem Start automatisch und fragt bei einer neuen Version nach `/reload-plugins`. Ohne Aktivierung manuell aktualisieren: `/plugin marketplace update alluvoai`, danach `/plugin update alluvo@alluvoai`. Die Workflow-Anleitungen selbst liefert der Assistent zur Laufzeit; dafür ist in beiden Fällen kein Plugin-Update nötig.
 
 ### Claude Cowork
 
@@ -91,6 +91,8 @@ Aktualisieren: `/plugin marketplace update alluvoai`, danach `/plugin update all
    codex mcp login alluvo
    ```
    Falls der mitgelieferte Server nicht übernommen wird, einmalig von Hand eintragen und danach anmelden: `codex mcp add alluvo --url https://api.alluvo.ai/mcp`
+
+Aktualisieren: `codex plugin marketplace upgrade`, danach das Plugin erneut hinzufügen.
 
 ### Ohne Plugin
 

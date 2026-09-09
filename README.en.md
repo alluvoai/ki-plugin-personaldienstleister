@@ -63,7 +63,7 @@ Each workflow's trigger phrases are in the [catalogue](plugins/alluvo/README.md)
    Choose **alluvo**, sign in with your alluvo credentials in the browser, and pick your organisation.
 4. Try it: "Who is on the bench right now?"
 
-Updating: `/plugin marketplace update alluvoai`, then `/plugin update alluvo@alluvoai`. Workflow guidance itself is served live by the assistant and needs no plugin update.
+**Updating:** Auto-update is **off by default** for third-party marketplaces — Claude Code won't download a new plugin version on its own otherwise. Turn it on once under **`/plugin` → Marketplaces → `alluvoai` → "Enable auto-update"**; after that, Claude Code checks after every start and asks you to `/reload-plugins` when a new version is available. Without it, update manually: `/plugin marketplace update alluvoai`, then `/plugin update alluvo@alluvoai`. Workflow guidance itself is served live by the assistant and needs no plugin update either way.
 
 ### Claude Cowork
 
@@ -91,6 +91,8 @@ Updating: `/plugin marketplace update alluvoai`, then `/plugin update alluvo@all
    codex mcp login alluvo
    ```
    If the bundled server is not picked up, add it once by hand and sign in afterwards: `codex mcp add alluvo --url https://api.alluvo.ai/mcp`
+
+Updating: `codex plugin marketplace upgrade`, then re-add the plugin.
 
 ### Without the plugin
 
