@@ -1,26 +1,32 @@
 {
     "name": "alluvo",
     "version": "1.12.1",
-    "description": "Guided workflows for alluvo staffing-agency operators (Disponenten, Recruiter, BDRs). Each workflow is served live by the alluvo MCP server, so it is always current and follows your organization's plan. Bundles the alluvo MCP server (OAuth) — connect on install with your alluvo account.",
+    "description": "alluvo – KI-Plugin für Personaldienstleister: Disposition, Recruiting, Verträge, Dienstplan und Stundenfreigabe per Sprache, in Claude und Codex. / AI plugin for German staffing agencies (Personaldienstleister, Zeitarbeit).",
     "author": {
         "name": "alluvo"
     },
     "homepage": "https://alluvo.de",
     "license": "proprietary",
     "keywords": [
-        "alluvo",
-        "staffing",
         "personaldienstleister",
+        "zeitarbeit",
+        "arbeitnehmerüberlassung",
+        "personaldienstleistung",
+        "ki-agent",
+        "claude-plugin",
+        "codex-plugin",
         "disposition",
-        "mcp",
-        "operator-workflows"
+        "recruiting",
+        "staffing-agency",
+        "temp-staffing",
+        "aüg"
     ],
     "skills": "./skills/",
     "mcpServers": "./.mcp.json",
     "interface": {
-        "displayName": "alluvo",
-        "shortDescription": "Guided staffing workflows on top of the alluvo assistant",
-        "longDescription": "Guided workflows for alluvo staffing-agency operators (Disponenten, Recruiter, BDRs). Each workflow is served live by the alluvo MCP server, so it is always current and follows your organization's plan. Bundles the alluvo MCP server (OAuth) — connect on install with your alluvo account.",
+        "displayName": "alluvo – KI-Plugin für Personaldienstleister",
+        "shortDescription": "KI-Agent für Zeitarbeit und Personaldienstleistung",
+        "longDescription": "AI plugin for German staffing agencies (Personaldienstleister, Zeitarbeit).",
         "developerName": "alluvo",
         "category": "Business",
         "websiteURL": "https://alluvo.de",
