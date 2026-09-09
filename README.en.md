@@ -50,6 +50,8 @@ Each workflow's trigger phrases are in the [catalogue](plugins/alluvo/README.md)
    ```
    /plugin marketplace add alluvoai/ki-plugin-personaldienstleister
    ```
+   Without GitHub, exactly the same — alluvo hosts the same marketplace itself:
+   `/plugin marketplace add https://api.alluvo.ai/plugins/marketplace.json`
 2. Install the plugin:
    ```
    /plugin install alluvo@alluvoai
@@ -65,9 +67,14 @@ Updating: `/plugin marketplace update alluvoai`, then `/plugin update alluvo@all
 
 ### Claude Cowork
 
-1. An administrator of your Claude organisation opens **Organisation settings → Plugins → Add plugin → GitHub** and selects this repository.
-2. Members enable **alluvo** in their plugin list.
-3. On first use the assistant asks for the alluvo sign-in (OAuth) and the organisation.
+**Recommended: connect the assistant organisation-wide.** An Owner of your Claude organisation adds a custom connector under **Organisation settings → Connectors** with the address `https://api.alluvo.ai/mcp`. Members sign in once; every workflow then starts without a plugin at all, because the alluvo server serves them.
+
+**The plugin itself reaches Cowork only through GitHub sync of your own copy.** This repository is a GitHub template:
+
+1. Choose **"Use this template"** and create a private copy in the customer's GitHub organisation.
+2. Install the **Claude GitHub App** in that organisation and grant it access to the copy.
+3. In Cowork, point **Sync from GitHub** at that copy.
+4. On first use the assistant asks for the alluvo sign-in (OAuth) and the organisation.
 
 ### Codex
 

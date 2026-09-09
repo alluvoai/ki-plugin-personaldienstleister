@@ -1,5 +1,6 @@
 {
     "name": "alluvoai",
+    "description": "alluvo – KI-Plugin für Personaldienstleister (Claude, Codex)",
     "owner": {
         "name": "alluvo"
     },

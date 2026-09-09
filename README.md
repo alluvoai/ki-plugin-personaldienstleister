@@ -50,6 +50,8 @@ Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md
    ```
    /plugin marketplace add alluvoai/ki-plugin-personaldienstleister
    ```
+   Ohne GitHub geht es genauso — alluvo hostet denselben Marketplace selbst:
+   `/plugin marketplace add https://api.alluvo.ai/plugins/marketplace.json`
 2. Plugin installieren:
    ```
    /plugin install alluvo@alluvoai
@@ -65,9 +67,14 @@ Aktualisieren: `/plugin marketplace update alluvoai`, danach `/plugin update all
 
 ### Claude Cowork
 
-1. Ein Administrator Ihrer Claude-Organisation öffnet **Organisationseinstellungen → Plugins → Plugin hinzufügen → GitHub** und wählt dieses Repository.
-2. Mitglieder aktivieren **alluvo** in ihrer Plugin-Liste.
-3. Beim ersten Aufruf fragt der Assistent nach der alluvo-Anmeldung (OAuth) und der Organisation.
+**Empfohlen: den Assistenten organisationsweit verbinden.** Ein Owner Ihrer Claude-Organisation trägt unter **Organisationseinstellungen → Connectors** einen eigenen Connector mit der Adresse `https://api.alluvo.ai/mcp` ein. Mitglieder melden sich einmalig an; danach starten alle Arbeitsabläufe auch ohne Plugin, weil der alluvo-Server sie liefert.
+
+**Das Plugin selbst geht in Cowork nur über GitHub-Sync einer eigenen Kopie.** Dieses Repository ist eine GitHub-Vorlage:
+
+1. **„Use this template"** wählen und eine private Kopie in der GitHub-Organisation des Kunden anlegen.
+2. Die **Claude GitHub App** in dieser Organisation installieren und der Kopie Zugriff geben.
+3. In Cowork **Sync from GitHub** auf diese Kopie zeigen lassen.
+4. Beim ersten Aufruf fragt der Assistent nach der alluvo-Anmeldung (OAuth) und der Organisation.
 
 ### Codex
 
