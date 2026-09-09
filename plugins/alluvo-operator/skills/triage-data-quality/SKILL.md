@@ -440,8 +440,9 @@ override is a free-text snapshot object (`recipient_name`, `care_of`, `street_na
 `street_number`, `address_supplement`, `zip`, `city`, `subdivision_code`, `country_code`), not a
 record reference. An explicit contract-level override wins over the
 company address, so prefer the company fix when the company record is simply thin. Setting a
-billing address does **not** help; `billing_location_id` is a retired parameter and is rejected
-with a "did you mean `billing_account_id`" steer.
+billing address does **not** help: the Rechnungsempfänger is a BillingAccount (`0-447`) selected
+via `billing_account_id` and feeds the *Rechnungsempfänger* block only, and `billing_location_id`
+is a retired parameter that is rejected with a "did you mean `billing_account_id`" steer.
 Report it as a gap worth closing before the contract is sent — but it blocks no stage
 transition, so never present it as "this contract cannot be sent" (`→ manage-contract-lifecycle`).
 

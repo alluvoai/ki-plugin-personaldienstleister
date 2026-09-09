@@ -6,6 +6,21 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); versioning is
 
 ## [Unreleased]
 
+### Changed — 2026-09-09 `triage-data-quality`: the Kunde-ohne-Firmensitz non-fix note explains the BillingAccount (alluvo#4673)
+
+The *Kunde ohne Firmensitz* remediation's "setting a billing address does not help" line now says
+why: the Rechnungsempfänger is its own record, a **BillingAccount** (`0-447`) selected via
+`billing_account_id`, and it only feeds the *Rechnungsempfänger* block — never the Vertragskopf
+preamble. `billing_location_id` stays named as the retired parameter that steers callers there by
+mistake.
+
+The rest of alluvo#4673 — the `manage-contract-lifecycle` sections on `billing_account_id` — is
+not landed here. That skill is now a thin stub served by the alluvo MCP server
+(`get-workflow-guidance`, alluvo#4937 below); its prose lives in
+`resources/mcp/workflows/manage-contract-lifecycle/SKILL.md` in the api repo and was ported there
+directly (api PR [#4942](https://github.com/Doing-the-right-things/alluvo/pull/4942)) rather than
+through this plugin.
+
 ### Changed — 2026-09-09 Pilot: `bench-check`, `profilvertrieb` and `manage-contract-lifecycle` are now thin stubs served by the MCP server (alluvo#4937)
 
 The alluvo MCP server gained a core tool **`get-workflow-guidance`**
