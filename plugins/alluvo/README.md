@@ -57,6 +57,13 @@ connecting the assistant without the plugin.
 Ask "was kannst du" (or install and say hello) to get the live catalogue,
 including any workflow a higher Tarif would unlock.
 
+
+## Freie Skills (ohne alluvo-Konto nutzbar)
+
+| Skill | Use it when |
+|---|---|
+| `stellenanzeige` | Write a job posting (Stellenanzeige) for a staffing agency or any employer through a short guided interview — one question at a time, two or three headline variants to choose from, then the full text with an AGG, AÜG, pay-transparency and GDPR check before delivery. Works without an alluvo account; with the alluvo assistant connected it silently pulls the company's Anrede (du/Sie), tone, bio, benefits and roles, and can create the posting in alluvo and publish it on the Talent Hub. Use when the operator says "Stellenanzeige schreiben", "Stellenausschreibung erstellen", "Anzeige für eine Pflegefachkraft", "Jobanzeige texten", "Stellenanzeige überarbeiten", "Anzeige AGG-konform machen", "write a job posting", "draft a job ad", "create a job listing", "rewrite this job ad", or hands over a Personalbedarf, a role or an old ad to turn into a posting. |
+
 ## Requirements
 
 An alluvo account with MCP access. Everything runs as the signed-in user,

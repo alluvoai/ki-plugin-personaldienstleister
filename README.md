@@ -38,6 +38,7 @@ Die Workflows starten auf natürliche Sätze, Deutsch oder Englisch:
 | Vertrieb | `profilvertrieb`, `prospect-companies`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
 | Service und Datenqualität | `clean-inbox`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
 | Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
+| Frei (ohne Konto) | `stellenanzeige` |
 
 Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md). Jeder Workflow lässt sich auch direkt starten, zum Beispiel mit `/alluvo:bench-check`.
 

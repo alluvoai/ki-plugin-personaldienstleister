@@ -38,6 +38,7 @@ Workflows activate on natural phrases, German or English:
 | Sales | `profilvertrieb`, `prospect-companies`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
 | Service and data quality | `clean-inbox`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
 | Automation and overview | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
+| Free (no account) | `stellenanzeige` |
 
 Each workflow's trigger phrases are in the [catalogue](plugins/alluvo/README.md). Any workflow can also be started explicitly, for example `/alluvo:bench-check`.
 
