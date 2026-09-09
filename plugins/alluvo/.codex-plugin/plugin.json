@@ -1,0 +1,32 @@
+{
+    "name": "alluvo",
+    "version": "1.12.1",
+    "description": "Guided workflows for alluvo staffing-agency operators (Disponenten, Recruiter, BDRs). Each workflow is served live by the alluvo MCP server, so it is always current and follows your organization's plan. Bundles the alluvo MCP server (OAuth) — connect on install with your alluvo account.",
+    "author": {
+        "name": "alluvo"
+    },
+    "homepage": "https://alluvo.de",
+    "license": "proprietary",
+    "keywords": [
+        "alluvo",
+        "staffing",
+        "personaldienstleister",
+        "disposition",
+        "mcp",
+        "operator-workflows"
+    ],
+    "skills": "./skills/",
+    "mcpServers": "./.mcp.json",
+    "interface": {
+        "displayName": "alluvo",
+        "shortDescription": "Guided staffing workflows on top of the alluvo assistant",
+        "longDescription": "Guided workflows for alluvo staffing-agency operators (Disponenten, Recruiter, BDRs). Each workflow is served live by the alluvo MCP server, so it is always current and follows your organization's plan. Bundles the alluvo MCP server (OAuth) — connect on install with your alluvo account.",
+        "developerName": "alluvo",
+        "category": "Business",
+        "websiteURL": "https://alluvo.de",
+        "defaultPrompt": [
+            "Wer ist gerade verleihfrei?",
+            "Verkauf mir den Kandidaten …"
+        ]
+    }
+}

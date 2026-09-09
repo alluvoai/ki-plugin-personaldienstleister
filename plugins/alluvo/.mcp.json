@@ -1,0 +1,8 @@
+{
+    "mcpServers": {
+        "alluvo": {
+            "type": "http",
+            "url": "https://api.alluvo.ai/mcp"
+        }
+    }
+}

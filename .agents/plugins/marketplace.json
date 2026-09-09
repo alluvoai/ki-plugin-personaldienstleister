@@ -1,0 +1,23 @@
+{
+    "name": "alluvoai",
+    "interface": {
+        "displayName": "alluvo"
+    },
+    "plugins": [
+        {
+            "name": "alluvo",
+            "source": {
+                "source": "local",
+                "path": "./plugins/alluvo"
+            },
+            "policy": {
+                "installation": "AVAILABLE",
+                "authentication": "ON_INSTALL",
+                "products": [
+                    "CODEX"
+                ]
+            },
+            "category": "Business"
+        }
+    ]
+}
