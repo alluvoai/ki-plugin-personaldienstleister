@@ -1,110 +1,110 @@
-# alluvo – AI plugin for staffing agencies (Claude, Codex)
+# alluvo – KI-Plugin für Personaldienstleister (Claude, Codex)
 
-🇩🇪 **Deutsche Version: [README.de.md](README.de.md)**
+🇬🇧 **English version: [README.en.md](README.en.md)**
 
-**alluvo** is the AI plugin for German staffing agencies (Personaldienstleister, Zeitarbeit). It turns Claude and Codex into an assistant that handles dispatching, recruiting, sales, contracts, shift plans and timesheet approval by natural language: directly in your alluvo data, with a preview before every write, and with the AÜG and ArbZG checks the industry requires.
+**alluvo** ist das KI-Plugin für Personaldienstleister und Zeitarbeitsfirmen. Es macht aus Claude und Codex einen Assistenten, der Disposition, Recruiting, Vertrieb, Verträge, Dienstplan und Stundenfreigabe per Sprache erledigt: direkt in Ihren alluvo-Daten, mit Vorschau vor jedem Schreibzugriff und mit den Prüfungen nach AÜG und ArbZG, die die Branche braucht.
 
-## Who it is for
+## Für wen
 
-- **Dispatchers** – who is on the bench, who fits which client request, shift plans, sick notes, timesheet approval.
-- **Recruiters and HR** – onboarding new employees, the digital personnel questionnaire, master data, invitations to the employee app.
-- **Sales and BDRs** – profile marketing, target companies nearby, outreach sequences, call preparation and follow-up.
-- **Management and team leads** – daily briefing, dispatching and sales overviews, task delegation.
+- **Disponent:innen** – wer ist verleihfrei, wer passt zu welchem Kundenbedarf, Dienstpläne, Krankmeldungen, Stundenfreigabe.
+- **Recruiter:innen und Personalabteilung** – Onboarding neuer Mitarbeiter, Personalfragebogen, Stammdaten, Einladung in die Mitarbeiter-App.
+- **Vertrieb und BDR** – Profilvertrieb, Zielfirmen im Umkreis, Outreach-Sequenzen, Gesprächsvorbereitung und -nachbereitung.
+- **Geschäftsführung und Teamleitung** – Tagesbriefing, Dispo- und Vertriebsübersicht, Aufgabenverteilung.
 
-## What you can say
+## Was Sie sagen können
 
-Workflows activate on natural phrases, German or English:
+Die Workflows starten auf natürliche Sätze, Deutsch oder Englisch:
 
-| You say … | alluvo does … |
+| Sie sagen … | alluvo macht … |
 |---|---|
-| "Who is on the bench right now?" | lists employees without an assignment, ranked by urgency, with home town and qualification |
-| "Find assignments for the bench" | matches available employees to clients with a framework contract and drafts assignment contracts |
-| "Sell the candidate Max Mustermann" | finds matching companies nearby, qualifies them and starts the outreach sequence |
-| "New staffing request from Klinikum Musterstadt" | captures the request completely and proposes candidates |
-| "Create the October shift plan" | plans the shifts with ArbZG checks and publishes them |
-| "Sick note for Ms Beispiel from Monday" | books the absence and files the certificate in the personnel record |
-| "Review the submitted hours" | shows submitted hours, deviations and open client approvals |
-| "Create a framework contract for Pflegedienst GmbH" | creates the contract, walks it through its stages and sends the §11 AÜG notification |
-| "What's on today?" | daily briefing from meetings, tasks, outreach replies and pipeline |
-| "Clean up the inbox" | triages the team inbox, closes with evidence, creates follow-up tasks |
+| „Wer ist gerade verleihfrei?" | listet Mitarbeiter ohne Einsatz, nach Dringlichkeit, mit Wohnort und Qualifikation |
+| „Finde Einsätze für die Bank" | matcht verleihfreie Mitarbeiter auf Kunden mit Rahmenvertrag und legt Einsatzvertragsentwürfe an |
+| „Verkauf mir den Kandidaten Max Mustermann" | sucht passende Firmen im Umkreis, qualifiziert sie und startet die Outreach-Sequenz |
+| „Neuer Personalbedarf von Klinikum Musterstadt" | erfasst die Anfrage vollständig und schlägt Kandidaten vor |
+| „Dienstplan für Oktober erstellen" | plant die Schichten mit ArbZG-Prüfung und veröffentlicht sie |
+| „Krankmeldung für Frau Beispiel ab Montag" | bucht die Abwesenheit und legt die AU in die Personalakte |
+| „Stundenfreigabe prüfen" | zeigt eingereichte Stunden, Abweichungen und offene Kundenfreigaben |
+| „Rahmenvertrag für die Pflegedienst GmbH anlegen" | erstellt den Vertrag, führt durch die Stufen und verschickt die §11-AÜG-Mitteilung |
+| „Was steht heute an?" | Tagesbriefing aus Terminen, Aufgaben, Outreach-Antworten und Pipeline |
+| „Inbox aufräumen" | triagiert das Team-Postfach, schließt mit Beleg, legt Folgeaufgaben an |
 
-## All workflows
+## Alle Workflows
 
-| Area | Workflows |
+| Bereich | Workflows |
 |---|---|
-| Dispatching | `bench-check`, `match-bench-to-clients`, `intake-personalbedarf`, `build-dienstplan`, `record-absence`, `approve-stundenfreigabe`, `head-of-disposition` |
-| Contracts | `manage-contract-lifecycle` |
-| Recruiting and HR | `onboard-new-employee`, `manage-meta-ads` |
-| Sales | `profilvertrieb`, `prospect-companies`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
-| Service and data quality | `clean-inbox`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
-| Automation and overview | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
+| Disposition | `bench-check`, `match-bench-to-clients`, `intake-personalbedarf`, `build-dienstplan`, `record-absence`, `approve-stundenfreigabe`, `head-of-disposition` |
+| Verträge | `manage-contract-lifecycle` |
+| Recruiting und Personal | `onboard-new-employee`, `manage-meta-ads` |
+| Vertrieb | `profilvertrieb`, `prospect-companies`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
+| Service und Datenqualität | `clean-inbox`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
+| Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
 
-Each workflow's trigger phrases are in the [catalogue](plugins/alluvo/README.md). Any workflow can also be started explicitly, for example `/alluvo:bench-check`.
+Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md). Jeder Workflow lässt sich auch direkt starten, zum Beispiel mit `/alluvo:bench-check`.
 
 ## Installation
 
 ### Claude Code
 
-1. Add the marketplace (once per machine):
+1. Marketplace hinzufügen (einmal pro Rechner):
    ```
    /plugin marketplace add alluvoai/ki-plugin-personaldienstleister
    ```
-2. Install the plugin:
+2. Plugin installieren:
    ```
    /plugin install alluvo@alluvoai
    ```
-3. Connect the assistant. The plugin brings the alluvo MCP server with it; on first use Claude Code asks you to sign in. You can also start it yourself:
+3. Assistenten verbinden. Das Plugin bringt den alluvo-MCP-Server mit; beim ersten Aufruf fragt Claude Code nach der Anmeldung. Sie können sie auch selbst starten:
    ```
    /mcp
    ```
-   Choose **alluvo**, sign in with your alluvo credentials in the browser, and pick your organisation.
-4. Try it: "Who is on the bench right now?"
+   **alluvo** auswählen, im Browser mit den alluvo-Zugangsdaten anmelden und die Organisation wählen.
+4. Ausprobieren: „Wer ist gerade verleihfrei?"
 
-Updating: `/plugin marketplace update alluvoai`, then `/plugin update alluvo@alluvoai`. Workflow guidance itself is served live by the assistant and needs no plugin update.
+Aktualisieren: `/plugin marketplace update alluvoai`, danach `/plugin update alluvo@alluvoai`. Die Workflow-Anleitungen selbst liefert der Assistent zur Laufzeit; dafür ist kein Plugin-Update nötig.
 
 ### Claude Cowork
 
-1. An administrator of your Claude organisation opens **Organisation settings → Plugins → Add plugin → GitHub** and selects this repository.
-2. Members enable **alluvo** in their plugin list.
-3. On first use the assistant asks for the alluvo sign-in (OAuth) and the organisation.
+1. Ein Administrator Ihrer Claude-Organisation öffnet **Organisationseinstellungen → Plugins → Plugin hinzufügen → GitHub** und wählt dieses Repository.
+2. Mitglieder aktivieren **alluvo** in ihrer Plugin-Liste.
+3. Beim ersten Aufruf fragt der Assistent nach der alluvo-Anmeldung (OAuth) und der Organisation.
 
 ### Codex
 
-1. Add the marketplace:
+1. Marketplace hinzufügen:
    ```
    codex plugin marketplace add alluvoai/ki-plugin-personaldienstleister
    ```
-2. Install the plugin:
+2. Plugin installieren:
    ```
    codex plugin add alluvo@alluvoai
    ```
-3. Sign in to the bundled assistant:
+3. Am mitgelieferten Assistenten anmelden:
    ```
    codex mcp login alluvo
    ```
-   If the bundled server is not picked up, add it once by hand and sign in afterwards: `codex mcp add alluvo --url https://api.alluvo.ai/mcp`
+   Falls der mitgelieferte Server nicht übernommen wird, einmalig von Hand eintragen und danach anmelden: `codex mcp add alluvo --url https://api.alluvo.ai/mcp`
 
-### Without the plugin
+### Ohne Plugin
 
-Every MCP client can connect to the alluvo assistant directly; the plugin only adds the guided workflows on top. Claude Desktop, claude.ai and other clients use the connector URL `https://api.alluvo.ai/mcp`. Details, including the personal-token path: [Connect the Assistant](https://docs.alluvo.ai/en/alluvo-mcp/connect).
+Jeder MCP-Client kann sich direkt mit dem alluvo-Assistenten verbinden; das Plugin ergänzt nur die geführten Workflows. Claude Desktop, claude.ai und andere Clients nutzen die Connector-URL `https://api.alluvo.ai/mcp`. Details, auch der Weg über ein persönliches Zugriffstoken: [Assistenten verbinden](https://docs.alluvo.ai/de/alluvo-mcp/connect).
 
-## Security and compliance
+## Sicherheit und Compliance
 
-- **Your data stays with you.** The plugin contains no data and no instructions, only the trigger phrases. Everything else is served by the alluvo server at runtime, after sign-in, within your permissions and only for your organisation.
-- **A preview before every write.** No contract, shift or contact is created or changed until you have confirmed the preview.
-- **AÜG and ArbZG built in.** Shift plans are checked against maximum working time, rest periods and Sunday work; maximum assignment duration, equal pay and the §11 notification are part of the contract workflow.
-- **Plan boundaries are visible.** A workflow outside your alluvo plan answers `MODULE_LOCKED`, names the plan it needs and links to the trial.
+- **Ihre Daten bleiben bei Ihnen.** Das Plugin enthält keine Daten und keine Anleitungen, nur die Auslöse-Sätze. Alles Weitere liefert der alluvo-Server zur Laufzeit, nach Anmeldung, im Rahmen Ihrer Berechtigungen und nur für Ihre Organisation.
+- **Vorschau vor jedem Schreibzugriff.** Kein Vertrag, keine Schicht, kein Kontakt wird angelegt oder geändert, ohne dass Sie die Vorschau bestätigt haben.
+- **AÜG und ArbZG eingebaut.** Dienstpläne werden gegen Höchstarbeitszeit, Ruhezeiten und Sonntagsarbeit geprüft; Überlassungshöchstdauer, Equal Pay und die §11-Mitteilung sind Teil des Vertrags-Workflows.
+- **Tarifgrenzen sind sichtbar.** Ein Workflow außerhalb Ihres alluvo-Tarifs antwortet mit `MODULE_LOCKED`, nennt den nötigen Tarif und verlinkt die Testphase.
 
-## Troubleshooting
+## Fehlerbehebung
 
-| Symptom | What to do |
+| Symptom | Was tun |
 |---|---|
-| `alluvo … Needs authentication` in `/mcp` | Sign in via `/mcp` → alluvo. Tokens expire; signing in again fixes it. |
-| A workflow does not activate | Use a trigger phrase from the catalogue, or start the workflow explicitly: `/alluvo:bench-check`. |
-| `MODULE_LOCKED` | The workflow belongs to a module your organisation has not enabled. The message names the plan and links to the trial. |
+| `alluvo … Needs authentication` unter `/mcp` | Über `/mcp` → alluvo anmelden. Tokens laufen ab; eine erneute Anmeldung behebt es. |
+| Ein Workflow startet nicht | Die Auslöse-Formulierung aus dem Katalog verwenden oder den Workflow direkt starten: `/alluvo:bench-check`. |
+| `MODULE_LOCKED` | Der Workflow gehört zu einem Modul, das Ihre Organisation nicht freigeschaltet hat. Die Meldung nennt den Tarif und verlinkt die Testphase. |
 
-## About alluvo
+## Über alluvo
 
-alluvo is the software for staffing agencies: employees, clients, contracts, shift planning, time tracking, billing and sales in one system, with an AI assistant and an employee app. More at [alluvo.de](https://alluvo.de), documentation at [docs.alluvo.ai](https://docs.alluvo.ai/en).
+alluvo ist die Software für Personaldienstleister: Mitarbeiter, Kunden, Verträge, Dienstplanung, Zeiterfassung, Abrechnung und Vertrieb in einem System, mit KI-Assistent und Mitarbeiter-App. Mehr unter [alluvo.de](https://alluvo.de), Dokumentation unter [docs.alluvo.ai](https://docs.alluvo.ai/de).
 
-Support: your alluvo contact.
+Support: Ihr alluvo-Ansprechpartner.
