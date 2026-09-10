@@ -115,6 +115,4 @@ Every MCP client can connect to the alluvo assistant directly; the plugin only a
 
 ## About alluvo
 
-alluvo is the software for staffing agencies: employees, clients, contracts, shift planning, time tracking, billing and sales in one system, with an AI assistant and an employee app. More at [alluvo.de](https://alluvo.de), documentation at [docs.alluvo.ai](https://docs.alluvo.ai/en).
-
-Support: your alluvo contact.
+alluvo is the software for staffing agencies: employees, clients, contracts, shift planning, time tracking, billing and sales in one system, with an AI assistant and an employee app. More at [alluvo.ai](https://alluvo.ai).

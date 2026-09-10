@@ -115,6 +115,4 @@ Jeder MCP-Client kann sich direkt mit dem alluvo-Assistenten verbinden; das Plug
 
 ## Über alluvo
 
-alluvo ist die Software für Personaldienstleister: Mitarbeiter, Kunden, Verträge, Dienstplanung, Zeiterfassung, Abrechnung und Vertrieb in einem System, mit KI-Assistent und Mitarbeiter-App. Mehr unter [alluvo.de](https://alluvo.de), Dokumentation unter [docs.alluvo.ai](https://docs.alluvo.ai/de).
-
-Support: Ihr alluvo-Ansprechpartner.
+alluvo ist die Software für Personaldienstleister: Mitarbeiter, Kunden, Verträge, Dienstplanung, Zeiterfassung, Abrechnung und Vertrieb in einem System, mit KI-Assistent und Mitarbeiter-App. Mehr unter [alluvo.ai](https://alluvo.ai).
