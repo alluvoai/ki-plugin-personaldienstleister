@@ -33,7 +33,6 @@ Workflows activate on natural phrases, German or English:
 | Area | Workflows |
 |---|---|
 | Dispatching | `bench-check`, `match-bench-to-clients`, `intake-personalbedarf`, `build-dienstplan`, `record-absence`, `approve-stundenfreigabe`, `head-of-disposition` |
-| Receipts and expenses | `manage-reimbursements` |
 | Contracts | `manage-contract-lifecycle` |
 | Recruiting and HR | `onboard-new-employee`, `manage-meta-ads` |
 | Sales | `profilvertrieb`, `prospect-companies`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
