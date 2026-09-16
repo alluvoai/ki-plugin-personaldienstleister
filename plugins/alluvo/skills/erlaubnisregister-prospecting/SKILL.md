@@ -1,6 +1,6 @@
 ---
 name: erlaubnisregister-prospecting
-description: Find, monitor and verify holders of an AÜG Arbeitnehmerüberlassungserlaubnis from the Bundesagentur's Erlaubnisregister — spot fresh Neugründungen as the best-timed prospects, slice the register by region for competitor and market intelligence, and check whether a named company holds a permit. Use when the operator says "Erlaubnisregister", "AÜG-Erlaubnis", "wer hat eine Erlaubnis", "Neugründungen", "neue Zeitarbeitsfirmen", "Wettbewerber in <Ort>", "hat <Firma> eine Erlaubnis", or wants competitor or market intelligence from the AÜG permit register.
+description: Work the AÜG-Erlaubnisregister — every company allowed to lend out staff in Germany. Permit holders per region, whether one company holds a permit at all, the Neugründungen (a permit first seen days ago = a staffing firm setting itself up now), and the import into the CRM. Use when the operator says "Erlaubnisregister", "AÜG-Erlaubnis", "wer darf verleihen", "neue Zeitarbeitsfirmen", "Neugründungen", "hat die Firma eine Erlaubnis", or "Wettbewerber in meiner Region".
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "erlaubnisregister-prospecting"` and follow exactly what it returns.

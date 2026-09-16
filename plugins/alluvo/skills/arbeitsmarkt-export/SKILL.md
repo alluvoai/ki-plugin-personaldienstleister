@@ -1,6 +1,6 @@
 ---
 name: arbeitsmarkt-export
-description: Export Bundesagentur Arbeitsmarkt data as CSV — open positions from the Lead-Radar job search, employers found in it, or slices of the AÜG Erlaubnisregister — for use outside alluvo. Use when the operator says "Stellen exportieren", "Arbeitgeber als CSV", "Erlaubnisregister exportieren", "Export aus dem Lead-Radar", "CSV der offenen Stellen", or wants Bundesagentur job-market or permit-register data exported.
+description: Build a CSV of the Bundesagentur data alluvo mirrors — open positions, hiring employers or the AÜG permit register — through alluvo's export engine, and say where to download it. Use when the operator says "als CSV", "exportieren", "Liste runterladen", "in Excel", or "Export der Erlaubnisinhaber". Not for reading the data — that is the Lead-Radar itself.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "arbeitsmarkt-export"` and follow exactly what it returns.
