@@ -37,7 +37,7 @@ Die Workflows starten auf natürliche Sätze, Deutsch oder Englisch:
 | Verträge | `manage-contract-lifecycle` |
 | Faktura und offene Posten | `manage-receivables` |
 | Recruiting und Personal | `onboard-new-employee`, `manage-meta-ads` |
-| Vertrieb | `profilvertrieb`, `prospect-companies`, `lead-radar-prospecting`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
+| Vertrieb | `profilvertrieb`, `prospect-companies`, `lead-radar-prospecting`, `erlaubnisregister-prospecting`, `arbeitsmarkt-export`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
 | Service und Datenqualität | `clean-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
 | Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
 | Frei (ohne Konto) | `stellenanzeige` |
