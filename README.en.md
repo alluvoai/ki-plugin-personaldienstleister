@@ -37,8 +37,8 @@ Workflows activate on natural phrases, German or English:
 | Contracts | `manage-contract-lifecycle` |
 | Invoicing and receivables | `manage-receivables` |
 | Recruiting and HR | `onboard-new-employee`, `manage-meta-ads` |
-| Sales | `profilvertrieb`, `prospect-companies`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
-| Service and data quality | `clean-inbox`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
+| Sales | `profilvertrieb`, `prospect-companies`, `lead-radar-prospecting`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
+| Service and data quality | `clean-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
 | Automation and overview | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
 | Free (no account) | `stellenanzeige` |
 
