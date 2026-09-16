@@ -1,6 +1,6 @@
 ---
 name: manage-shift-schedules
-description: Create, adjust, publish, or cancel a monthly shift schedule for an assignment with ArbZG compliance checks. Use for "Dienstplan erstellen", "Schichten anlegen", "Schicht stornieren", "Schicht umbesetzen", "Dienstplan veröffentlichen", "Soll-Vergleich" or "Dienstplan-Vorschlag prüfen".
+description: 'Create, adjust, publish, or cancel a monthly shift schedule for an assignment with ArbZG compliance checks. Use for "Dienstplan erstellen", "Schichten anlegen", "Schicht stornieren", "Schicht umbesetzen", "Dienstplan veröffentlichen", "Soll-Vergleich" or "Dienstplan-Vorschlag prüfen".'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "manage-shift-schedules"` and follow exactly what it returns.

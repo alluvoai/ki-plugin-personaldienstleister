@@ -1,6 +1,6 @@
 ---
 name: manage-reimbursements
-description: File, reconcile, review, approve, reject, correct, and pay employee receipts, expenses, and travel costs, including bulk travel-expense statements. Use for "Beleg einreichen", "Belege abgleichen", "doppelt eingereicht", "Auslage ablehnen", "Spesen freigeben", "Reisekosten prüfen", "als bezahlt markieren" or "Sammel-Reisekostenabrechnung". German triggers also include: Sammelabrechnung.
+description: 'File, reconcile, review, approve, reject, correct, and pay employee receipts, expenses, and travel costs, including bulk travel-expense statements. Use for "Beleg einreichen", "Belege abgleichen", "doppelt eingereicht", "Auslage ablehnen", "Spesen freigeben", "Reisekosten prüfen", "als bezahlt markieren" or "Sammel-Reisekostenabrechnung". German triggers also include: Sammelabrechnung.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "manage-reimbursements"` and follow exactly what it returns.

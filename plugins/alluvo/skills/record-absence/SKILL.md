@@ -1,6 +1,6 @@
 ---
 name: record-absence
-description: Record employee sickness, vacation, unpaid absence, or an AU certificate, and check remaining vacation entitlement before booking leave. Use for "Krankmeldung eintragen", "Urlaub buchen", "AU-Bescheinigung hochladen", "Abwesenheit erfassen", "Resturlaub prüfen" or "Urlaubsanspruch prüfen".
+description: 'Record employee sickness, vacation, unpaid absence, or an AU certificate, and check remaining vacation entitlement before booking leave. Use for "Krankmeldung eintragen", "Urlaub buchen", "AU-Bescheinigung hochladen", "Abwesenheit erfassen", "Resturlaub prüfen" or "Urlaubsanspruch prüfen".'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "record-absence"` and follow exactly what it returns.

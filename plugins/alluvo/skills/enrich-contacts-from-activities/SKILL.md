@@ -1,6 +1,6 @@
 ---
 name: enrich-contacts-from-activities
-description: Enrich contact records from recent emails, signatures, calls, meetings, and notes, always proposing changes before writing them. Also record external WhatsApp consent and the contact's du/Sie form. Use for "Kontakte anreichern", "Kontaktdaten aus Aktivitäten", "WhatsApp-Einwilligung erfassen", "Opt-in hinterlegen" or "Anrede festlegen". German triggers also include: E-Mail-Signatur auslesen.
+description: 'Enrich contact records from recent emails, signatures, calls, meetings, and notes, always proposing changes before writing them. Also record external WhatsApp consent and the contact''s du/Sie form. Use for "Kontakte anreichern", "Kontaktdaten aus Aktivitäten", "WhatsApp-Einwilligung erfassen", "Opt-in hinterlegen" or "Anrede festlegen". German triggers also include: E-Mail-Signatur auslesen.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "enrich-contacts-from-activities"` and follow exactly what it returns.

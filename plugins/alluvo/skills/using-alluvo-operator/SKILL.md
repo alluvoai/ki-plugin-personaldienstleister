@@ -1,6 +1,6 @@
 ---
 name: using-alluvo-operator
-description: Navigate all available alluvo operator workflows and explain cross-cutting tool behavior, page permissions, and knowledge-base access. Use for "was kannst du", "wie fange ich an", "welche Workflows gibt es", "hilf mir", "Zugriff geben", "Berechtigung prüfen" or "Wissensdatenbank freigeben".
+description: 'Navigate all available alluvo operator workflows and explain cross-cutting tool behavior, page permissions, and knowledge-base access. Use for "was kannst du", "wie fange ich an", "welche Workflows gibt es", "hilf mir", "Zugriff geben", "Berechtigung prüfen" or "Wissensdatenbank freigeben".'
 ---
 
 Call the MCP tool `get-workflow-guidance` with no arguments. It returns the catalogue of

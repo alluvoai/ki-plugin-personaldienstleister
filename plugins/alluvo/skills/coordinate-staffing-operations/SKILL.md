@@ -1,6 +1,6 @@
 ---
 name: coordinate-staffing-operations
-description: Coordinate staffing operations across available employees, expiring assignments, open staffing requests, schedule gaps, timesheet backlog, and dispatcher tasks. Use for "Dispo-Übersicht", "Auslastung", "auslaufende Einsätze", "offene Bedarfe", "Dienstplan-Lücken", "Disponenten koordinieren" or "offene Lesebestätigungen".
+description: 'Coordinate staffing operations across available employees, expiring assignments, open staffing requests, schedule gaps, timesheet backlog, and dispatcher tasks. Use for "Dispo-Übersicht", "Auslastung", "auslaufende Einsätze", "offene Bedarfe", "Dienstplan-Lücken", "Disponenten koordinieren" or "offene Lesebestätigungen".'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "coordinate-staffing-operations"` and follow exactly what it returns.

@@ -1,6 +1,6 @@
 ---
 name: daily-briefing
-description: Create a daily briefing from alluvo data with today's meetings, due tasks, outreach replies, pipeline alerts, and top priorities. Use for "was steht heute an", "Tagesbriefing", "mein Tag", "Tagesüberblick" or "was ist heute wichtig". German triggers also include: Morgenbriefing.
+description: 'Create a daily briefing from alluvo data with today''s meetings, due tasks, outreach replies, pipeline alerts, and top priorities. Use for "was steht heute an", "Tagesbriefing", "mein Tag", "Tagesüberblick" or "was ist heute wichtig". German triggers also include: Morgenbriefing.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "daily-briefing"` and follow exactly what it returns.

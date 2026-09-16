@@ -1,6 +1,6 @@
 ---
 name: manage-outreach-enrollments
-description: Enroll qualified companies in automated outreach sequences and manage each enrollment through status checks, pause, resume, and removal. Use for "Unternehmen in Sequenz aufnehmen", "Outreach starten", "Sequenz pausieren", "Sequenz fortsetzen", "aus Sequenz entfernen" or "Profil anhängen".
+description: 'Enroll qualified companies in automated outreach sequences and manage each enrollment through status checks, pause, resume, and removal. Use for "Unternehmen in Sequenz aufnehmen", "Outreach starten", "Sequenz pausieren", "Sequenz fortsetzen", "aus Sequenz entfernen" or "Profil anhängen".'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "manage-outreach-enrollments"` and follow exactly what it returns.

@@ -1,6 +1,6 @@
 ---
 name: manage-contract-lifecycle
-description: Create and manage framework and assignment contracts, transition their stages, send the §11 AÜG notification, set billing periods, and manage invoice bank accounts. Use for "Rahmenvertrag anlegen", "Einsatzvertrag erstellen", "AÜV abschließen", "Vertrag stornieren", "Abrechnungszeitraum ändern" or "Rechnungskonto anlegen".
+description: 'Create and manage framework and assignment contracts, transition their stages, send the §11 AÜG notification, set billing periods, and manage invoice bank accounts. Use for "Rahmenvertrag anlegen", "Einsatzvertrag erstellen", "AÜV abschließen", "Vertrag stornieren", "Abrechnungszeitraum ändern" or "Rechnungskonto anlegen".'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "manage-contract-lifecycle"` and follow exactly what it returns.
