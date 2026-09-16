@@ -35,6 +35,7 @@ Die Workflows starten auf natürliche Sätze, Deutsch oder Englisch:
 | Disposition | `bench-check`, `match-bench-to-clients`, `intake-personalbedarf`, `build-dienstplan`, `record-absence`, `approve-stundenfreigabe`, `head-of-disposition` |
 | Belege und Reisekosten | `manage-reimbursements` |
 | Verträge | `manage-contract-lifecycle` |
+| Faktura und offene Posten | `manage-receivables` |
 | Recruiting und Personal | `onboard-new-employee`, `manage-meta-ads` |
 | Vertrieb | `profilvertrieb`, `prospect-companies`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
 | Service und Datenqualität | `clean-inbox`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
