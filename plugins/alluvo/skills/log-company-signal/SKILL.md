@@ -1,6 +1,6 @@
 ---
 name: log-company-signal
-description: Record a hiring, expansion, funding, product-launch, partnership, or leadership-change Signal on a company. Use this skill when the operator says "Signal loggen", "Firma stellt gerade ein", "Neueröffnung in Köln", "log a signal", "company is expanding", "funding round", "new location", "neue PDL", or wants to record any buying or market trigger on a company record.
+description: Record a hiring, expansion, funding, product launch, partnership, or leadership-change signal on a company. Use for "Signal loggen", "Firma stellt gerade ein", "Neueröffnung", "neuer Standort", "Finanzierungsrunde" or "neue PDL". German triggers also include: Firma stellt ein, Führungswechsel.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "log-company-signal"` and follow exactly what it returns.

@@ -1,6 +1,6 @@
 ---
 name: define-icp
-description: Define, maintain, or retrieve Ideal Customer Profiles (ICP) for individual segments. Use this skill when the operator asks "wer ist unser Wunschkunde", "ICP für Krankenhäuser definieren", "welche Unternehmen passen zu uns", "define ideal customer profile", "qualify a lead against our ICP", or wants to document target decision-maker personas per segment.
+description: Define, maintain, retrieve, or apply Ideal Customer Profiles for individual market segments and decision-maker personas. Use for "wer ist unser Wunschkunde", "ICP für Krankenhäuser definieren", "welche Unternehmen passen zu uns" or "Lead gegen ICP prüfen". German triggers also include: ICP definieren, Lead qualifizieren, Zielkundensegment, Entscheiderprofil.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "define-icp"` and follow exactly what it returns.

@@ -1,6 +1,6 @@
 ---
 name: enrich-contacts-from-activities
-description: Enrich alluvo Contacts (Kontakte anreichern) by mining their recent activity — emails, logged calls, meetings, notes, above all email signatures — for missing contact-info fields, then writing approved changes back through MCP so every edit is attributed to the operator. Review-first: always proposes a change table before writing. Also covers recording a WhatsApp consent given outside alluvo and pinning the du/Sie form for a contact. Use when the operator says "Kontakte anreichern", "Kontaktdaten aus Aktivitäten befüllen", "WhatsApp-Einwilligung erfassen", "Opt-in für WhatsApp hinterlegen", "Anrede festlegen", "diesen Kontakt duze ich", "enrich contacts", "fill in contact details from their emails", "pull phone numbers or LinkedIn from email signatures", "update contacts from recent activity", "record a WhatsApp opt-in", "set the formality for this contact", or wants sparse Contact records cleaned up from communication history.
+description: Enrich contact records from recent emails, signatures, calls, meetings, and notes, always proposing changes before writing them. Also record external WhatsApp consent and the contact's du/Sie form. Use for "Kontakte anreichern", "Kontaktdaten aus Aktivitäten", "WhatsApp-Einwilligung erfassen", "Opt-in hinterlegen" or "Anrede festlegen". German triggers also include: E-Mail-Signatur auslesen.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "enrich-contacts-from-activities"` and follow exactly what it returns.

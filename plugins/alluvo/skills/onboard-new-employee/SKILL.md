@@ -1,6 +1,6 @@
 ---
 name: onboard-new-employee
-description: Onboard a newly added employee — check profile completeness, send the digitaler Personalfragebogen (guest link) and apply the returned Stammdaten, capture Bankverbindung, Notfallkontakt, bAV and No-Gos, surface nearby placement opportunities, and invite the employee to the self-service app. Use when the operator says "neuen Mitarbeiter anlegen", "Mitarbeiter onboarden", "Profil vervollständigen", "Personalfragebogen schicken", "Stammdaten übernehmen", "Bankverbindung anlegen", "Notfallkontakt erfassen", "No-Go hinterlegen", "bAV eintragen", "Go-Live-Datum setzen", "Einladung versenden", "Einladung erneut senden", "Mitarbeiter kann sich nicht anmelden", "Passwort zurücksetzen", "Mitarbeiter anschreiben", "onboard new employee", "check completeness", "message the employee in the app", or after a new employee record has been created.
+description: Onboard a newly added employee by checking completeness, sending and applying the digital personnel questionnaire, recording essential details, finding nearby placements, and managing self-service access. Use for "Mitarbeiter onboarden", "Personalfragebogen schicken", "Stammdaten übernehmen", "Bankverbindung anlegen", "Einladung versenden", "Passwort zurücksetzen" or "Mitarbeiter in der App anschreiben". Shared-inbox ticket work belongs to manage-inbox.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "onboard-new-employee"` and follow exactly what it returns.

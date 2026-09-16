@@ -15,6 +15,8 @@
 
 Workflows activate on natural phrases, German or English:
 
+Skill names and procedural instructions are English. German terms such as “verleihfrei”, “Dienstplan” and “Stundenfreigabe” remain in their descriptions, so you can keep asking in German. The assistant responds in your language.
+
 | You say … | alluvo does … |
 |---|---|
 | "Who is on the bench right now?" | lists employees without an assignment, ranked by urgency, with home town and qualification |
@@ -32,15 +34,15 @@ Workflows activate on natural phrases, German or English:
 
 | Area | Workflows |
 |---|---|
-| Dispatching | `bench-check`, `match-bench-to-clients`, `intake-personalbedarf`, `build-dienstplan`, `record-absence`, `approve-stundenfreigabe`, `head-of-disposition` |
+| Dispatching | `bench-check`, `match-bench-to-clients`, `capture-staffing-request`, `manage-shift-schedules`, `record-absence`, `manage-timesheet-approvals`, `coordinate-staffing-operations` |
 | Receipts and expenses | `manage-reimbursements` |
 | Contracts | `manage-contract-lifecycle` |
-| Invoicing and receivables | `manage-receivables` |
+| Invoicing and receivables | `manage-invoices-and-payments` |
 | Recruiting and HR | `onboard-new-employee`, `manage-meta-ads` |
-| Sales | `profilvertrieb`, `prospect-companies`, `lead-radar-prospecting`, `erlaubnisregister-prospecting`, `arbeitsmarkt-export`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
-| Service and data quality | `clean-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
+| Sales | `market-talent-profiles`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `export-labor-market-data`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `call-prep`, `process-call-notes`, `log-company-signal`, `coordinate-sales` |
+| Service and data quality | `manage-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities` |
 | Automation and overview | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
-| Free (no account) | `stellenanzeige` |
+| Free (no account) | `write-job-posting` |
 
 Each workflow's trigger phrases are in the [catalogue](plugins/alluvo/README.md). Any workflow can also be started explicitly, for example `/alluvo:bench-check`.
 

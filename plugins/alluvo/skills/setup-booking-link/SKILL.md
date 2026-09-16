@@ -1,6 +1,6 @@
 ---
 name: setup-booking-link
-description: Buchungslink / Terminlink / Kalender-Link einrichten (Calendly-style) — anlegen, konfigurieren, aktivieren, reparieren. Use when the operator says "Buchungslink anlegen", "Terminlink erstellen", "Kalender-Link einrichten", "create a booking link", "set up my meeting link", "mein Buchungslink zeigt keine Termine", "Buchungslink aktivieren", "warum funktioniert mein Terminlink nicht", "embed my booking link on the website".
+description: Create, configure, activate, or repair a booking link. Use for "Buchungslink anlegen", "Terminlink erstellen", "Kalender-Link einrichten", "Buchungslink aktivieren", "Buchungslink zeigt keine Termine" or "Terminlink funktioniert nicht". Use share-booking-link to retrieve, send, or embed an existing link. German triggers also include: Terminlink reparieren.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "setup-booking-link"` and follow exactly what it returns.

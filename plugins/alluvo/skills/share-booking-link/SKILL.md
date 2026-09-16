@@ -1,6 +1,6 @@
 ---
 name: share-booking-link
-description: Kalender-Link / Terminlink / Buchungslink teilen, verschicken oder einbetten. Use when the operator says "schick mir meinen Terminlink", "Kalender-Link teilen", "Buchungslink per Mail senden", "Link für die Website", "share my booking link", "send my calendar link", "embed my meeting link", "wie bekomme ich meinen Buchungslink".
+description: Retrieve, share, send, or embed an existing booking link. Use for "schick mir meinen Terminlink", "Kalender-Link teilen", "Buchungslink per Mail senden", "Link für die Website", "Buchungslink einbetten" or "wie bekomme ich meinen Buchungslink". Use setup-booking-link to create, configure, activate, or repair the link. German triggers also include: Terminlink schicken, Buchungslink abrufen.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "share-booking-link"` and follow exactly what it returns.

@@ -1,6 +1,6 @@
 ---
 name: match-bench-to-clients
-description: Match verleihfreie Mitarbeiter to clients with active Rahmenverträge, generate shareable profile URLs, draft Einsatzverträge, and create Disponent review tasks. Use when the operator says "matche die Bank", "finde Einsätze für verleihfreie Mitarbeiter", "match the bench", "create draft assignment contracts", "wer passt zu welchem Kunden", "Einsatzmöglichkeiten für den Bench", or wants to turn an availability gap into a placement.
+description: Match verleihfreie employees to existing clients with active framework contracts, generate profile links, draft assignment contracts, and create dispatcher review tasks. Use for "matche die Bank", "finde Einsätze für verleihfreie Mitarbeiter", "wer passt zu welchem Kunden" or "Einsatzmöglichkeiten für den Bench". Use bench-check for availability only and market-talent-profiles for broader outbound profile marketing. German triggers also include: Bestandskunden matchen.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "match-bench-to-clients"` and follow exactly what it returns.

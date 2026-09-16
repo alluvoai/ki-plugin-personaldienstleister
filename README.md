@@ -15,6 +15,8 @@
 
 Die Workflows starten auf natürliche Sätze, Deutsch oder Englisch:
 
+Skill-Namen und Ablaufanweisungen sind auf Englisch. Deutsche Begriffe wie „verleihfrei“, „Dienstplan“ und „Stundenfreigabe“ bleiben in den Beschreibungen enthalten, damit Sie weiterhin auf Deutsch fragen können. Der Assistent antwortet in Ihrer Sprache.
+
 | Sie sagen … | alluvo macht … |
 |---|---|
 | „Wer ist gerade verleihfrei?" | listet Mitarbeiter ohne Einsatz, nach Dringlichkeit, mit Wohnort und Qualifikation |
@@ -32,15 +34,15 @@ Die Workflows starten auf natürliche Sätze, Deutsch oder Englisch:
 
 | Bereich | Workflows |
 |---|---|
-| Disposition | `bench-check`, `match-bench-to-clients`, `intake-personalbedarf`, `build-dienstplan`, `record-absence`, `approve-stundenfreigabe`, `head-of-disposition` |
+| Disposition | `bench-check`, `match-bench-to-clients`, `capture-staffing-request`, `manage-shift-schedules`, `record-absence`, `manage-timesheet-approvals`, `coordinate-staffing-operations` |
 | Belege und Reisekosten | `manage-reimbursements` |
 | Verträge | `manage-contract-lifecycle` |
-| Faktura und offene Posten | `manage-receivables` |
+| Faktura und offene Posten | `manage-invoices-and-payments` |
 | Recruiting und Personal | `onboard-new-employee`, `manage-meta-ads` |
-| Vertrieb | `profilvertrieb`, `prospect-companies`, `lead-radar-prospecting`, `erlaubnisregister-prospecting`, `arbeitsmarkt-export`, `enroll-outreach`, `define-icp`, `account-research`, `call-prep`, `call-summary`, `log-company-signal`, `head-of-sales` |
-| Service und Datenqualität | `clean-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-companies`, `enrich-contacts-from-activities` |
+| Vertrieb | `market-talent-profiles`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `export-labor-market-data`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `call-prep`, `process-call-notes`, `log-company-signal`, `coordinate-sales` |
+| Service und Datenqualität | `manage-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities` |
 | Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
-| Frei (ohne Konto) | `stellenanzeige` |
+| Frei (ohne Konto) | `write-job-posting` |
 
 Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md). Jeder Workflow lässt sich auch direkt starten, zum Beispiel mit `/alluvo:bench-check`.
 

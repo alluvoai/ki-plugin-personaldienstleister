@@ -1,6 +1,6 @@
 ---
 name: using-alluvo-operator
-description: Entry point and navigator for the alluvo Operator plugin. Shows which guided workflows (skills) are available and routes to the right one. Use when the operator asks "was kannst du", "wie fange ich an", "hilf mir", "womit kannst du helfen", "überblick", "welche workflows gibt es", "what can you do", "where do I start", greets without a concrete task, or seems unsure which skill fits. Also the reference for cross-cutting alluvo tool behaviour that belongs to no single workflow — including page access and permission sets ("gib X Zugriff auf Y", "warum sieht X den Teamkalender nicht", Berechtigung, permission set, "give someone access to a page") and access to a Wissensdatenbank ("wer darf die Wissensdatenbank sehen", "Wissensdatenbank freigeben", "knowledge base members").
+description: Navigate all available alluvo operator workflows and explain cross-cutting tool behavior, page permissions, and knowledge-base access. Use for "was kannst du", "wie fange ich an", "welche Workflows gibt es", "hilf mir", "Zugriff geben", "Berechtigung prüfen" or "Wissensdatenbank freigeben".
 ---
 
 Call the MCP tool `get-workflow-guidance` with no arguments. It returns the catalogue of

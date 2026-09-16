@@ -1,6 +1,6 @@
 ---
 name: prospect-companies
-description: Find and prepare qualified target companies for an employee — via geo-radius, ICP segment, and market signals. Use this skill when the operator asks "wer kommt für Mitarbeiter X in Frage", "Zielfirmen finden", "Unternehmen in der Nähe von Köln suchen", "passende Firmen finden", "Leads qualifizieren", "find companies near employee", "prospect companies", "qualify leads for a candidate", or wants a shortlist of qualified targets for outreach. For the end-to-end pitch (compose/send/enroll), use profilvertrieb instead.
+description: Find and qualify target companies for a specific employee using geography, ICP segments, and market signals. Use for "wer kommt für Mitarbeiter X in Frage", "Zielfirmen finden", "Unternehmen in der Nähe suchen", "passende Firmen finden" or "Leads qualifizieren". This workflow stops at the shortlist; use market-talent-profiles to compose, send, or enroll the pitch, and lead-radar-prospecting for employers advertising current vacancies. German triggers also include: passende Firmen für Mitarbeiter, wer kommt für Mitarbeiter in Frage.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "prospect-companies"` and follow exactly what it returns.

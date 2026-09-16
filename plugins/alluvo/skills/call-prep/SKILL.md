@@ -1,6 +1,6 @@
 ---
 name: call-prep
-description: Prepare for a meeting or call — account snapshot, conversation history (Calls/Meetings/Notes via Timeline), open contracts/Opportunities, suggested agenda, and discovery questions, from your own alluvo data. Use this skill when the operator says "Termin vorbereiten", "Gespräch vorbereiten", "bereite den Call mit X vor", "Meeting-Vorbereitung", "prep for my call", "call prep", or "prepare for the meeting with".
+description: Prepare for a specific meeting or call using the account snapshot, conversation history, contracts, opportunities, agenda, and discovery questions in alluvo. Use for "Termin vorbereiten", "Gespräch vorbereiten", "Call mit Firma X vorbereiten" or "Meeting-Vorbereitung". Use account-briefing for a general internal dossier without a scheduled conversation. German triggers also include: Call vorbereiten, Kundentermin vorbereiten.
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "call-prep"` and follow exactly what it returns.
