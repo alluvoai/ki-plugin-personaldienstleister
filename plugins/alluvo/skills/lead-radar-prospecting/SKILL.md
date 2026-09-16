@@ -1,0 +1,8 @@
+---
+name: lead-radar-prospecting
+description: Find employers that are hiring right now — by role, place and radius — from the Bundesagentur job market, read their open positions, and take the promising ones into the CRM as companies. Use this skill when the operator says "Lead-Radar", "wer sucht gerade Pflegekräfte in Köln", "welche Firmen stellen ein", "offene Stellen im Umkreis", "Arbeitgeber mit Personalbedarf", "als Firma anlegen", or wants new prospects with an acute staffing need.
+---
+
+Call the MCP tool `get-workflow-guidance` with `workflow: "lead-radar-prospecting"` and follow exactly what it returns.
+Do not improvise this workflow from the description above — the returned guidance is the workflow.
+If the tool answers MODULE_LOCKED, relay that message to the operator and stop.
