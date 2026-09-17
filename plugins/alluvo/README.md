@@ -1,6 +1,6 @@
 # alluvo – KI-Plugin für Personaldienstleister
 
-Guided workflows for alluvo staffing-agency operators. Version 1.16.0.
+Guided workflows for alluvo staffing-agency operators. Version 1.16.1.
 
 The workflows are **served by the alluvo MCP server**, not shipped in this
 repository: this plugin carries the trigger phrases, the assistant carries the
