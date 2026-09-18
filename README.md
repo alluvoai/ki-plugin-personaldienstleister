@@ -38,7 +38,7 @@ Skill-Namen und Ablaufanweisungen sind auf Englisch. Deutsche Begriffe wie „ve
 | Belege und Reisekosten | `manage-reimbursements` |
 | Verträge | `manage-contract-lifecycle` |
 | Faktura und offene Posten | `manage-invoices-and-payments` |
-| Recruiting und Personal | `onboard-new-employee`, `manage-meta-ads` |
+| Recruiting und Personal | `onboard-new-employee`, `message-employee`, `manage-meta-ads` |
 | Vertrieb | `market-talent-profiles`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `export-labor-market-data`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `call-prep`, `process-call-notes`, `log-company-signal`, `coordinate-sales` |
 | Service und Datenqualität | `manage-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities` |
 | Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |

@@ -38,7 +38,7 @@ Skill names and procedural instructions are English. German terms such as “ver
 | Receipts and expenses | `manage-reimbursements` |
 | Contracts | `manage-contract-lifecycle` |
 | Invoicing and receivables | `manage-invoices-and-payments` |
-| Recruiting and HR | `onboard-new-employee`, `manage-meta-ads` |
+| Recruiting and HR | `onboard-new-employee`, `message-employee`, `manage-meta-ads` |
 | Sales | `market-talent-profiles`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `export-labor-market-data`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `call-prep`, `process-call-notes`, `log-company-signal`, `coordinate-sales` |
 | Service and data quality | `manage-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities` |
 | Automation and overview | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
