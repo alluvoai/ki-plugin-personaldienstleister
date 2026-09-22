@@ -1,6 +1,6 @@
 ---
 name: manage-inbox
-description: 'Triage tickets in a shared alluvo inbox and manage forwarding, business hours, notifications, spam, and phone-assistant instructions. Use for "Inbox aufräumen", "Tickets bearbeiten", "Ticket weiterleiten", "Ticket verschieben", "Geschäftszeiten ändern", "neuen Vorgang öffnen" or "als Spam melden". Writing an employee directly is message-employee; their app access is onboard-new-employee. German triggers also include: neuer Vorgang.'
+description: 'Triage tickets in a shared alluvo inbox and manage forwarding, business hours, notifications, spam, phone-assistant instructions, and the web chat embedded on a website. Use for "Inbox aufräumen", "Tickets bearbeiten", "Ticket weiterleiten", "Ticket verschieben", "Geschäftszeiten ändern", "neuen Vorgang öffnen", "als Spam melden" or "Web-Chat auf der Website einrichten". Writing an employee directly is message-employee; their app access is onboard-new-employee. German triggers also include: neuer Vorgang, Web-Chat einrichten, Chat-Widget.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "manage-inbox"` and follow exactly what it returns.
