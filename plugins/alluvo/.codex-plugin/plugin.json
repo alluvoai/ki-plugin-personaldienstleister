@@ -1,6 +1,6 @@
 {
     "name": "alluvo",
-    "version": "1.17.4",
+    "version": "1.18.0",
     "description": "alluvo – KI-Plugin für Personaldienstleister: Disposition, Recruiting, Verträge, Dienstplan und Stundenfreigabe per Sprache, in Claude und Codex. / AI plugin for German staffing agencies (Personaldienstleister, Zeitarbeit).",
     "author": {
         "name": "alluvo"
@@ -29,10 +29,21 @@
         "longDescription": "AI plugin for German staffing agencies (Personaldienstleister, Zeitarbeit).",
         "developerName": "alluvo",
         "category": "Business",
+        "capabilities": [
+            "Interactive",
+            "Write"
+        ],
         "websiteURL": "https://alluvo.ai",
+        "privacyPolicyURL": "https://alluvo.ai/datenschutz",
+        "termsOfServiceURL": "https://alluvo.ai/nutzungsbedingungen",
         "defaultPrompt": [
             "Wer ist gerade verleihfrei?",
-            "Verkauf mir den Kandidaten …"
-        ]
+            "Was steht heute an?",
+            "Nimm einen neuen Personalbedarf auf.",
+            "Welche Stundennachweise warten auf Freigabe?"
+        ],
+        "brandColor": "#C79F60",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
     }
 }

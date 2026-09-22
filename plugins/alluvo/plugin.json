@@ -1,0 +1,54 @@
+{
+    "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+    "name": "alluvo",
+    "version": "1.18.0",
+    "description": "alluvo – KI-Plugin für Personaldienstleister: Disposition, Recruiting, Verträge, Dienstplan und Stundenfreigabe per Sprache, in Claude und Codex. / AI plugin for German staffing agencies (Personaldienstleister, Zeitarbeit).",
+    "author": {
+        "name": "alluvo",
+        "url": "https://alluvo.ai"
+    },
+    "homepage": "https://alluvo.ai",
+    "repository": "https://github.com/alluvoai/ki-plugin-personaldienstleister",
+    "license": "proprietary",
+    "keywords": [
+        "personaldienstleister",
+        "zeitarbeit",
+        "arbeitnehmerüberlassung",
+        "personaldienstleistung",
+        "ki-agent",
+        "claude-plugin",
+        "codex-plugin",
+        "disposition",
+        "recruiting",
+        "staffing-agency",
+        "temp-staffing",
+        "aüg"
+    ],
+    "extensions": {
+        "com.openai": {
+            "interface": {
+                "displayName": "alluvo – KI-Plugin für Personaldienstleister",
+                "shortDescription": "KI-Agent für Zeitarbeit und Personaldienstleistung",
+                "longDescription": "AI plugin for German staffing agencies (Personaldienstleister, Zeitarbeit).",
+                "developerName": "alluvo",
+                "category": "Business",
+                "capabilities": [
+                    "Interactive",
+                    "Write"
+                ],
+                "websiteURL": "https://alluvo.ai",
+                "privacyPolicyURL": "https://alluvo.ai/datenschutz",
+                "termsOfServiceURL": "https://alluvo.ai/nutzungsbedingungen",
+                "defaultPrompt": [
+                    "Wer ist gerade verleihfrei?",
+                    "Was steht heute an?",
+                    "Nimm einen neuen Personalbedarf auf.",
+                    "Welche Stundennachweise warten auf Freigabe?"
+                ],
+                "brandColor": "#C79F60",
+                "composerIcon": "./assets/icon.png",
+                "logo": "./assets/logo.png"
+            }
+        }
+    }
+}
