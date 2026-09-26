@@ -41,7 +41,7 @@ Skill names and procedural instructions are English. German terms such as “ver
 | Recruiting and HR | `onboard-new-employee`, `message-employee`, `manage-meta-ads` |
 | Sales | `market-talent-profiles`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `export-labor-market-data`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `call-prep`, `process-call-notes`, `log-company-signal`, `coordinate-sales` |
 | Service and data quality | `manage-inbox`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities` |
-| Automation and overview | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator` |
+| Automation and overview | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator`, `setup-organization` |
 | Free (no account) | `write-job-posting` |
 
 Each workflow's trigger phrases are in the [catalogue](plugins/alluvo/README.md). Any workflow can also be started explicitly, for example `/alluvo:bench-check`.
