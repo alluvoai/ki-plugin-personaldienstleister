@@ -59,7 +59,43 @@ value; when unsure, call `get-model-schema` with `model_type: "0-80"` and `conte
 If the user wants to assign the job to a campaign, call `search-model` with `model_type:
 "0-191"` (JobPostingCampaign) und die ID als `job_posting_campaign_id` mitgeben.
 
-## Meta campaign (Phase 4, option 3, only with alluvo)
+## Publish to the Bundesagentur (Phase 4, option 3, only with alluvo)
+
+Offer this only when the job exists in alluvo (option 2) and the Bundesagentur integration is
+connected. Check with `manage-record-action` (`action: "list"`, `model_type: "0-80"`, the job id):
+if `publish-job-to-channel` is not listed, the integration is not connected or the user lacks
+`jobs.edit` — say so in one sentence and fall back to the channel copy from structure.md.
+
+Readiness checklist, tell the user before calling the action:
+
+- **Postal code** on the job (`postal_code`, five digits) and a location in Germany.
+- **BA occupation** (`ba_title_code`): on the job, or on its staffing role (`role_id`). The code
+  comes from the BA occupation catalogue and must be an active occupation title.
+- A description of at least 30 characters and a Talent Hub address (the job needs a slug).
+
+Then run the action with the usual two stages:
+
+```
+Tool: manage-record-action
+action: "run"
+model_type: "0-80"
+model_id: <Job-ID>
+action_name: "publish-job-to-channel"
+data: {}
+confirmed: false
+```
+
+Show the preview, obtain confirmation, repeat with `confirmed: true`. When the readiness checklist
+is not met, the action answers with the missing details in plain language: relay them and fix the
+job (`manage-model` update) rather than retrying. The job goes to the Bundesagentur with the next
+automatic submission (about every ten minutes); applications still arrive through the Talent Hub.
+`data: {"not_published": true}` is a test mode that is not published at the BA — use it only if the
+user explicitly wants to test. Later: `update-job-on-channel`, `withdraw-job-from-channel`,
+`preview-job-at-ba` (PDF preview, nothing published). After 21 days without a change the owner
+gets the task „Ist die Stelle noch offen?“; after 30 days without confirmation the job is
+withdrawn from the BA (it stays on the Talent Hub). Confirm with `confirm-job-still-open`.
+
+## Meta campaign (Phase 4, option 4, only with alluvo)
 
 For a real campaign rather than short copy, call `get-workflow-guidance` with
 `workflow: "manage-meta-ads"` and follow its guidance. The Talent Hub URL of the created job

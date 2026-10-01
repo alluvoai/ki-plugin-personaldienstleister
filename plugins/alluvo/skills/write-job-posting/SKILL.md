@@ -91,13 +91,19 @@ ask again; deliver exactly that way.
    connected. Follow [references/alluvo.md](references/alluvo.md), section “Create the job”:
    first preview with `confirmed: false`, get the user's confirmation, then use
    `confirmed: true`. Show the Talent Hub URL afterwards.
-3. **Kanalvarianten erzeugen**: Indeed, Bundesagentur, Meta-Ads short copy, social post,
-   WhatsApp short version, using the formats in [references/structure.md](references/structure.md).
+3. **In alluvo anlegen und bei der Bundesagentur für Arbeit veröffentlichen**: offer only when
+   alluvo is connected **and** the Bundesagentur integration is set up (the
+   `publish-job-to-channel` action is then listed for the job). It needs the job from option 2.
+   Follow [references/alluvo.md](references/alluvo.md), section “Publish to the Bundesagentur”,
+   including the readiness checklist (postal code, BA occupation on the job or its role).
+4. **Kanalvarianten erzeugen**: Indeed, Bundesagentur (copy for manual entry, only when the
+   channel above is not available), Meta-Ads short copy, social post, WhatsApp short version,
+   using the formats in [references/structure.md](references/structure.md).
    For a real Meta campaign, when alluvo is connected, call `get-workflow-guidance` with
    `workflow: "manage-meta-ads"` and follow its guidance.
-4. **Nur hier im Chat.**
+5. **Nur hier im Chat.**
 
-Without a filesystem and without alluvo, only options 3 and 4 remain.
+Without a filesystem and without alluvo, only options 4 and 5 remain.
 
 End with a short closing block: what was delivered, where it was delivered, which open risks
 from Phase 3 remain, and a suggested next step (for example „Meta-Kampagne dazu?", „Zweite

@@ -44,7 +44,7 @@ vehicle, installation allowances, and the travel-away arrangement.
 **Indeed.** Title ≤ 80 characters without chains of special characters, full text with the standard
 sections as headings, salary range in Indeed's salary field, and location as city with postcode.
 
-**Bundesagentur für Arbeit (Jobbörse).** Fields: job title, Tätigkeit (professional title under
+**Bundesagentur für Arbeit (Jobbörse).** When alluvo is connected with the Bundesagentur integration, publish the job through the channel action instead (see references/alluvo.md, “Publish to the Bundesagentur”); the field list below is for manual entry. Fields: job title, Tätigkeit (professional title under
 the classification), location, start, fixed-term status, working time, compensation, requirements,
 and application route. No marketing copy; keep it factual.
 
