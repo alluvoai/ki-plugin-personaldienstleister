@@ -1,6 +1,6 @@
 # alluvo – KI-Plugin für Personaldienstleister
 
-Guided workflows for alluvo staffing-agency operators. Version 1.19.15.
+Guided workflows for alluvo staffing-agency operators. Version 1.19.16.
 
 The workflows are **served by the alluvo MCP server**, not shipped in this
 repository: this plugin carries the trigger phrases, the assistant carries the
@@ -72,7 +72,7 @@ including any workflow a higher Tarif would unlock.
 
 | Skill | Use it when |
 |---|---|
-| `write-job-posting` | Write or revise a job posting through a short guided interview, offer headline choices, and check the result for AGG, AÜG, pay-transparency, and GDPR requirements. Use for "Stellenanzeige schreiben", "Stellenausschreibung erstellen", "Jobanzeige texten", "Stellenanzeige überarbeiten" or "Anzeige AGG-konform machen". It works without an alluvo account and can use connected alluvo company settings and publishing tools when available. |
+| `write-job-posting` | Write or revise a job posting through a short guided interview, offer headline choices, and check the result for AGG, AÜG, pay-transparency, and GDPR requirements. Use for "Stellenanzeige schreiben", "Stellenausschreibung erstellen", "Jobanzeige texten", "Stellenanzeige überarbeiten", "Anzeige AGG-konform machen", "Stellenanzeige veröffentlichen" or "im Talent Hub ausschreiben"; an already finished text skips the interview and goes straight to the check and publishing. It works without an alluvo account and can use connected alluvo company settings and publishing tools when available. |
 
 ## Requirements
 

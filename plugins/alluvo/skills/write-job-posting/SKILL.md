@@ -1,8 +1,8 @@
 ---
 name: write-job-posting
-description: Write or revise a job posting through a short guided interview, offer headline choices, and check the result for AGG, AÜG, pay-transparency, and GDPR requirements. Use for "Stellenanzeige schreiben", "Stellenausschreibung erstellen", "Jobanzeige texten", "Stellenanzeige überarbeiten" or "Anzeige AGG-konform machen". It works without an alluvo account and can use connected alluvo company settings and publishing tools when available.
+description: Write or revise a job posting through a short guided interview, offer headline choices, and check the result for AGG, AÜG, pay-transparency, and GDPR requirements. Use for "Stellenanzeige schreiben", "Stellenausschreibung erstellen", "Jobanzeige texten", "Stellenanzeige überarbeiten", "Anzeige AGG-konform machen", "Stellenanzeige veröffentlichen" or "im Talent Hub ausschreiben"; an already finished text skips the interview and goes straight to the check and publishing. It works without an alluvo account and can use connected alluvo company settings and publishing tools when available.
 summary: Write or revise a compliant job posting through a guided interview.
-triggers: Stellenanzeige schreiben, Stellenausschreibung erstellen, Jobanzeige texten, Stellenanzeige überarbeiten, Anzeige AGG-konform machen
+triggers: Stellenanzeige schreiben, Stellenausschreibung erstellen, Stellenanzeige veröffentlichen, im Talent Hub ausschreiben, Stellenanzeige überarbeiten, Anzeige AGG-konform machen
 aliases: stellenanzeige
 ---
 
@@ -13,7 +13,7 @@ voice. Work like a good copywriter in a briefing: understand first, offer varian
 then check. Nothing goes out without the user's approval.
 
 <HARD-GATE>
-Write the full text only after the user has chosen a headline variant. Do not deliver
+Write the full text only after the user has chosen a headline variant. (A finished text the user supplies has no headline step; see “Shortcut” below.) Do not deliver
 anything (file, alluvo, channel variants) until the compliance check has run and the user
 has named or chosen the delivery format.
 </HARD-GATE>
@@ -30,6 +30,20 @@ has named or chosen the delivery format.
   the end of the interview what you carried over.
 - **Answer in the user's language.** Write the posting in the language the user requests
   (default: German).
+
+## Shortcut — the text already exists
+
+If the user supplies a finished posting (pasted text, file, or an existing job they want
+published) and asks to publish it („Stellenanzeige veröffentlichen", „im Talent Hub
+ausschreiben"), do not rewrite it. Run Phase 0, then ask only for the fields the alluvo job
+still needs and the text does not state (usually location, employment type, salary, start of
+publication). Skip Phase 1 and Phase 2, run Phase 3 on the given text and propose corrections
+as a diff the user approves, then go straight to Phase 4 option 2 with a preview
+(`confirmed: false`) before publishing. The HARD-GATE's headline-variant step does not apply
+here; the compliance check and the preview do.
+
+If the user only says „lass uns eine Stellenanzeige im Talent Hub veröffentlichen" without a
+text, run the normal flow and treat delivery option 2 as already chosen.
 
 ## Phase 0 — Context probe (silent, no follow-up)
 
