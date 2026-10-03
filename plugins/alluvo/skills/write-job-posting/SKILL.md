@@ -36,8 +36,9 @@ has named or chosen the delivery format.
 If the user supplies a finished posting (pasted text, file, or an existing job they want
 published) and asks to publish it („Stellenanzeige veröffentlichen", „im Talent Hub
 ausschreiben"), do not rewrite it. Run Phase 0, then ask only for the fields the alluvo job
-still needs and the text does not state (usually location, employment type, salary, start of
-publication). Skip Phase 1 and Phase 2, run Phase 3 on the given text and propose corrections
+still needs and the text does not state (usually location, placement type, contract type and
+working time, salary). Split the text into the short Markdown intro (`description`) and the
+three lists (tasks, profile, benefits). Skip Phase 1 and Phase 2, run Phase 3 on the given text and propose corrections
 as a diff the user approves, then go straight to Phase 4 option 2 with a preview
 (`confirmed: false`) before publishing. The HARD-GATE's headline-variant step does not apply
 here; the compliance check and the preview do.
@@ -64,8 +65,10 @@ alluvo, assumption). Write and change nothing in this phase.
 Follow the questionnaire in [references/interview.md](references/interview.md) in its stated
 order, but ask only questions that remain open. Ask at most seven questions, usually three
 to five. Required questions without which no posting can be created: position and level,
-work location, placement form (Arbeitnehmerüberlassung, Direktvermittlung, or own employment),
-working-time model, and compensation.
+work location, placement type (Arbeitnehmerüberlassung, Direktvermittlung, eigene Stelle, or
+Freelance; skip when obvious from the request or the hub default), working-time model, and
+compensation. Map the answers to `contract_type`, `working_time` and `weekly_hours` as described
+in references/alluvo.md.
 
 If the user supplies an old posting or staffing requirement, extract everything from it
 first and ask only about gaps.
@@ -103,8 +106,11 @@ ask again; deliver exactly that way.
    `stellenanzeige-<position>-<ort>.md`.
 2. **In alluvo anlegen und im Talent Hub veröffentlichen**: offer only when alluvo is
    connected. Follow [references/alluvo.md](references/alluvo.md), section “Create the job”:
-   first preview with `confirmed: false`, get the user's confirmation, then use
-   `confirmed: true`. Show the Talent Hub URL afterwards.
+   check that the Talent Hub is enabled, write the lists into the structured fields and a short
+   Markdown intro into `description`, set `valid_through` only if the user names a date, preview
+   with `confirmed: false`, get confirmation, then `confirmed: true`. Afterwards run the
+   `check-public-page` action (Google-for-Jobs check), report its findings, fix and re-run, and
+   only then show the Talent Hub URL.
 3. **In alluvo anlegen und bei der Bundesagentur für Arbeit veröffentlichen**: offer only when
    alluvo is connected **and** the Bundesagentur integration is set up (the
    `publish-job-to-channel` action is then listed for the job). It needs the job from option 2.

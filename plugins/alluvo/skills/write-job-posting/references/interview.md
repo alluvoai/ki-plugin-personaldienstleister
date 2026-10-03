@@ -28,6 +28,10 @@ travel radius instead of the client name.
   the client. This must be clear in the posting.
 - Direktvermittlung: direct employment with the client.
 - Eigene Anstellung (internal role at the staffing agency itself).
+- Freelance (project work, no employment).
+
+Skip the question when the request makes it obvious or the hub's default placement type fits;
+say what you assumed. Store it as `placement_type`.
 
 This answer controls compliance checks and the wording of „Wir bieten".
 
@@ -35,6 +39,9 @@ This answer controls compliance checks and the wording of „Wir bieten".
 
 „Welches Arbeitszeitmodell?" Options: Vollzeit; Teilzeit (ask for the number of hours);
 shift work with Früh/Spät/Nacht; weekends and public holidays; Minijob; fixed-term with date.
+Also clarify the contract (unbefristet, befristet, Minijob, Werkstudent, Praktikum, Ausbildung,
+Freelance) when not stated. These answers become `contract_type`, `working_time`
+(Vollzeit, Teilzeit, flexibel) and `weekly_hours`.
 
 For shifts, ask whether a Wunschdienstplan or availability survey is offered; this is a
 strong argument in nursing.

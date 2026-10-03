@@ -20,6 +20,14 @@ exists. All calls in Phase 0 are read-only.
 If a call returns `MODULE_LOCKED`, tell the user in one sentence and continue without that
 source.
 
+## Precheck: is the Talent Hub on?
+
+Before creating a job, read `manage-settings` with `action: "get"`, `group: "talent_hub"`.
+`is_enabled` must be `true`; otherwise the job exists but has no public page. Tell the user in
+one sentence and offer to switch it on (`manage-settings` `action: "update"`, preview first).
+Also note `default_placement_type` and `default_valid_through_days` (new jobs inherit them) and
+`show_contact_phone` (off by default).
+
 ## Create the job (Phase 4, option 2)
 
 Always use two stages: preview first, then user confirmation, then execution.
@@ -30,34 +38,74 @@ action: "create"
 model_type: "0-80"
 data:
   title: "<Titel mit (m/w/d)>"
-  description: "<Volltext als Markdown oder Absätze>"
+  description: "<kurzes Intro, Markdown, 2-4 Sätze>"
+  status: "published"            # required: draft | preparing | review | published | completed
   location: "<Stadt>"
-  postal_code: "<PLZ>"
-  employment_type: "<full_time | part_time | temporary | contractor | intern | other>"
-  work_hours: "<z. B. 'Vollzeit 39 h, Schichtdienst'>"
-  responsibilities: "<Aufgaben>"
-  qualifications: "<Profil>"
-  job_benefits: "<Wir bieten>"
+  postal_code: "<PLZ, 5 Ziffern>"
+  placement_type: "<temporary_agency | direct_placement | own_position | freelance>"
+  contract_type: "<permanent | fixed_term | minijob | midijob | working_student | internship | apprenticeship | freelance>"
+  working_time: "<full_time | part_time | flexible>"
+  weekly_hours: <Zahl 0-80, optional>
+  work_hours: "<Freitext, z. B. 'Schichtdienst Früh/Spät', optional>"
+  responsibilities: ["<Aufgabe>", "..."]
+  qualifications: ["<Anforderung>", "..."]
+  job_benefits: ["<Benefit>", "..."]
   salary_min: <Zahl in EUR, z. B. 3400>
   salary_max: <Zahl in EUR>
   salary_currency: "EUR"
   salary_unit: "MONTH"
+  is_remote: <true|false>
   role_id: <ID aus dem Rollenkatalog, optional>
   published_at: "<ISO 8601 mit Offset, z. B. 2026-10-01T09:00:00+02:00>"
-  immediate_start: <true|false>
 confirmed: false
 ```
 
-Show the preview, obtain confirmation, and repeat with `confirmed: true`. The result contains
-`talent_hub_url`; show it and offer to add a hero photo (recipe via `get-tool-guidance` with
-`tool_names: ["manage-media"]`).
+Field rules (checked against the real schema; `get-model-schema` with `model_type: "0-80"` is the
+authority when in doubt):
 
-Always express salaries in euros, never cents. `salary_unit` is free text: `MONTH` for
-monthly pay, `HOUR` for hourly pay, and `YEAR` for annual pay. `employment_type` is a closed
-value; when unsure, call `get-model-schema` with `model_type: "0-80"` and `context: "form"`.
+- `status` is **required** on create. `slug` is generated from the title; do not send it.
+- `description` is only the short **Markdown intro**. Aufgaben, Profil and Benefits go into the
+  three **string lists** (`responsibilities`, `qualifications`, `job_benefits`), one item per
+  bullet, never as one text block. The page renders them as their own sections.
+- `placement_type` defaults to the hub's `default_placement_type`; send it when it differs.
+  `employment_type` (employee enum) is not the job's contract field — use `contract_type`,
+  `working_time` and `weekly_hours`. Interview mapping: unbefristet -> `permanent`; befristet ->
+  `fixed_term`; Minijob/Midijob -> `minijob`/`midijob`; Werkstudent -> `working_student`;
+  Praktikum -> `internship`; Ausbildung -> `apprenticeship`; Freelance -> `freelance`;
+  Vollzeit/Teilzeit/flexibel -> `working_time`; stated hours per week -> `weekly_hours`.
+- `valid_through` (date `Y-m-d`, end of the advertising period): **send it only if the user names a
+  date.** Otherwise the default `today + default_valid_through_days` applies on create. After
+  expiry the job moves to `completed`; the owner gets a reminder 7 days before.
+- `meta_title` is an optional SEO title; leave it out unless the user wants one.
+- Salary is in euros, never cents. `salary_unit` is free text: `MONTH`, `HOUR` or `YEAR`.
+  The page and Google only show salary when the hub's "show salary" setting is on.
+- Read-only, never send: `talent_hub_url`, `creator_id`, `date_posted`, `meta_description`,
+  `hiring_organization_*`, `identifier`. `is_remote` true adds a chip and, with
+  `applicant_location_requirements` (list of country/region strings), the remote data for Google.
+
+Show the preview, obtain confirmation, and repeat with `confirmed: true`. The result carries
+`talent_hub_url`.
+
+## Verify after publishing
+
+Run the read-only Google-for-Jobs check; it needs no confirmation:
+
+```
+Tool: manage-record-action
+action: "run"
+model_type: "0-80"
+model_id: <Job-ID>
+action_name: "check-public-page"
+```
+
+It returns `talent_hub_url`, whether the hub is enabled, whether the job is published, active and
+not expired, and `findings` (`error` or `warning` with field and message). `live: true` means no
+errors. Report every finding in plain language, fix what the job data can fix (`manage-model`
+update, preview first), and re-run. Only then show `talent_hub_url` as the final link and offer a
+hero photo (recipe via `get-tool-guidance` with `tool_names: ["manage-media"]`).
 
 If the user wants to assign the job to a campaign, call `search-model` with `model_type:
-"0-191"` (JobPostingCampaign) und die ID als `job_posting_campaign_id` mitgeben.
+"0-191"` (JobPostingCampaign) and pass the ID as `job_posting_campaign_id`.
 
 ## Publish to the Bundesagentur (Phase 4, option 3, only with alluvo)
 
