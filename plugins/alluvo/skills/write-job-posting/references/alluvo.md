@@ -26,7 +26,14 @@ Before creating a job, read `manage-settings` with `action: "get"`, `group: "tal
 `is_enabled` must be `true`; otherwise the job exists but has no public page. Tell the user in
 one sentence and offer to switch it on (`manage-settings` `action: "update"`, preview first).
 Also note `default_placement_type` and `default_valid_through_days` (new jobs inherit them) and
-`show_contact_phone` (off by default).
+`show_contact_phone` (off by default). Before changing ANY talent hub setting call
+`manage-settings` `action: "describe"`, `group: "talent_hub"` — it lists every field and how to
+work with it. Relevant for a posting: `header_display` (`logo` = header shows only the brand-kit
+logo, `text` = the name), `employer_name_display`, `application_form` and
+`application_form_overrides` (form fields per placement type; a custom question needs a
+candidate custom field first), and the per-language texts `placement_content_translations`,
+`apply_texts_translations`, `about_texts_translations`. Object fields replace the whole value:
+`get` first, send the full object.
 
 ## Create the job (Phase 4, option 2)
 
@@ -54,7 +61,9 @@ data:
   salary_max: <Zahl in EUR>
   salary_currency: "EUR"
   salary_unit: "MONTH"
-  is_remote: <true|false>
+  work_model: "<onsite | hybrid | remote_possible | remote_first | remote_only>"
+  hybrid_office_days: <1-5, only for hybrid>
+  remote_region: "<ISO country, default DE for remote_first/remote_only>"
   role_id: <ID aus dem Rollenkatalog, optional>
   published_at: "<ISO 8601 mit Offset, z. B. 2026-10-01T09:00:00+02:00>"
 confirmed: false
@@ -80,8 +89,14 @@ authority when in doubt):
 - Salary is in euros, never cents. `salary_unit` is free text: `MONTH`, `HOUR` or `YEAR`.
   The page and Google only show salary when the hub's "show salary" setting is on.
 - Read-only, never send: `talent_hub_url`, `creator_id`, `date_posted`, `meta_description`,
-  `hiring_organization_*`, `identifier`. `is_remote` true adds a chip and, with
-  `applicant_location_requirements` (list of country/region strings), the remote data for Google.
+  `hiring_organization_*`, `identifier`, `is_remote` (derived from `work_model`).
+- `work_model` drives the chip ("Remote first · Deutschland · Büro Wuppertal", "Hybrid · 2 Tage
+  Büro"), search and Google (`TELECOMMUTE` + `remote_region`). Interview mapping: vor Ort ->
+  `onsite`; hybrid (+ Bürotage) -> `hybrid` + `hybrid_office_days`; Remote möglich ->
+  `remote_possible`; remote first -> `remote_first`; nur remote -> `remote_only`.
+- `location`/`postal_code` are the office or company site. For `remote_first`/`remote_only` the
+  card shows "Deutschlandweit (remote)", every German city search finds the job, and the slug
+  of a NEW job ends in `-remote` instead of the city.
 
 Show the preview, obtain confirmation, and repeat with `confirmed: true`. The result carries
 `talent_hub_url`.
@@ -92,10 +107,10 @@ Run the read-only Google-for-Jobs check; it needs no confirmation:
 
 ```
 Tool: manage-record-action
-action: "run"
+operation: "execute"
 model_type: "0-80"
-model_id: <Job-ID>
-action_name: "check-public-page"
+record_id: <Job-ID>
+action: "check-public-page"
 ```
 
 It returns `talent_hub_url`, whether the hub is enabled, whether the job is published, active and
@@ -118,14 +133,17 @@ translation (nothing is translated automatically): `manage-model` with `model_ty
 ```
 data: {job_opening_id: <Job-ID>, locale: "en", title: "...", description: "...",
        meta_title: "...", meta_description: "...", is_ai_translated: true,
-       editorial_data: {tasks_bullets: ["..."], requirements_bullets: ["..."]}}
+       responsibilities: ["..."], qualifications: ["..."], job_benefits: ["..."]}
 ```
 
 `locale` must be an enabled Talent Hub language other than the default one, once per job.
 `description` is the Markdown intro; keep tone, structure and facts of the original and translate
-every language-bound text (`editorial_data` accepts subtitle, honest_intro, tasks_intro,
-tasks_bullets, requirements_bullets, cta_label, apply_heading, apply_intro, work_hours). Change
-The same `editorial_data` also takes the page texts of that language: `faqs` [{question, answer}],
+every language-bound text. The three lists are columns on the translation (`responsibilities`,
+`qualifications`, `job_benefits`, string lists); a list the translation lacks is HIDDEN in that
+language, never shown in German, and `check-public-page` warns (`translation_missing_lists`).
+Legacy `editorial_data.tasks_bullets`/`requirements_bullets` are still accepted and moved onto
+the columns. `editorial_data` accepts subtitle, honest_intro, tasks_intro, cta_label,
+apply_heading, apply_intro, work_hours. The same `editorial_data` also takes the page texts of that language: `faqs` [{question, answer}],
 `process_steps` [{title, description}], `process_kicker`, `process_headline`, `process_intro`,
 `faq_headline`, `contact_kicker`, `contact_headline`, `contact_text`, `contact_business_hours`,
 `share_question`, `chat_cta_label` (same limits as the settings below). Without them the page uses

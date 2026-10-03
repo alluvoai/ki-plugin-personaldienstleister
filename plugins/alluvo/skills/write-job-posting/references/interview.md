@@ -21,6 +21,11 @@ Standorte"; „regional flexibel (Fahrtkosten geregelt)".
 For Arbeitnehmerüberlassung, the host company is often not public: use the region and
 travel radius instead of the client name.
 
+Then the work model, in the same question when it fits: „Vor Ort, hybrid (wie viele Tage im
+Büro?), Remote möglich, Remote first oder nur remote?" Store it as `work_model`
+(+ `hybrid_office_days`); for remote first / nur remote the city becomes the office location
+and `remote_region` defaults to DE. Skip it for clearly on-site work and say so.
+
 ## 3. Placement form (required)
 
 „Wie wird die Stelle besetzt?"
