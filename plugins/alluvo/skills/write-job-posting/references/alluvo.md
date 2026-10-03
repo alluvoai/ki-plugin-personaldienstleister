@@ -125,6 +125,14 @@ data: {job_opening_id: <Job-ID>, locale: "en", title: "...", description: "...",
 `description` is the Markdown intro; keep tone, structure and facts of the original and translate
 every language-bound text (`editorial_data` accepts subtitle, honest_intro, tasks_intro,
 tasks_bullets, requirements_bullets, cta_label, apply_heading, apply_intro, work_hours). Change
+The same `editorial_data` also takes the page texts of that language: `faqs` [{question, answer}],
+`process_steps` [{title, description}], `process_kicker`, `process_headline`, `process_intro`,
+`faq_headline`, `contact_kicker`, `contact_headline`, `contact_text`, `contact_business_hours`,
+`share_question`, `chat_cta_label` (same limits as the settings below). Without them the page uses
+the tenant's texts for that language (`manage-settings` `talent_hub.placement_content_translations`,
+`{"en": {"own_position": {…}}}`; `placement_content` is the default language), then the built-in
+ones. The page shows ONE language, so never mix. `process_headline` may contain `:count`, replaced by
+the number of steps ("In :count steps" becomes "In four steps"). Change
 later with `action: "update"`; list a job's translations with `get-model` on the job (0-80) or
 `query-model` on 0-459 filtered by `job_opening_id`.
 
