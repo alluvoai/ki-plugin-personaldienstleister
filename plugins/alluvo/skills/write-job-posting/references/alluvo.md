@@ -107,6 +107,34 @@ hero photo (recipe via `get-tool-guidance` with `tool_names: ["manage-media"]`).
 If the user wants to assign the job to a campaign, call `search-model` with `model_type:
 "0-191"` (JobPostingCampaign) and pass the ID as `job_posting_campaign_id`.
 
+## Translations (after publishing)
+
+The Talent Hub serves a job in every enabled language; the job's own text is the default
+language, other languages need a translation record. The `check-public-page` findings with code
+`missing_translation` name each enabled language that has none. For each, offer to write the
+translation (nothing is translated automatically): `manage-model` with `model_type: "0-459"`,
+`action: "create"`, `confirmed: false` first, then `true` after confirmation:
+
+```
+data: {job_opening_id: <Job-ID>, locale: "en", title: "...", description: "...",
+       meta_title: "...", meta_description: "...", is_ai_translated: true,
+       editorial_data: {tasks_bullets: ["..."], requirements_bullets: ["..."]}}
+```
+
+`locale` must be an enabled Talent Hub language other than the default one, once per job.
+`description` is the Markdown intro; keep tone, structure and facts of the original and translate
+every language-bound text (`editorial_data` accepts subtitle, honest_intro, tasks_intro,
+tasks_bullets, requirements_bullets, cta_label, apply_heading, apply_intro, work_hours). Change
+later with `action: "update"`; list a job's translations with `get-model` on the job (0-80) or
+`query-model` on 0-459 filtered by `job_opening_id`.
+
+**Always send `is_ai_translated: true` when you wrote the translation.** The public job page then
+shows a small notice in the page language ("translated with AI", with the original language) and a
+"View original" link to the job in the default language; the PDF carries the same line, and
+`check-public-page` reports the language as an `ai_translated` warning so the team can review it.
+A person who has reviewed or written a translation themselves sets `is_ai_translated: false`
+(`action: "update"`); an update without the field keeps the stored value.
+
 ## Publish to the Bundesagentur (Phase 4, option 3, only with alluvo)
 
 Offer this only when the job exists in alluvo (option 2) and the Bundesagentur integration is
