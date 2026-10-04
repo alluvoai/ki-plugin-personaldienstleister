@@ -14,7 +14,7 @@ exists. All calls in Phase 0 are read-only.
 | Role catalogue | `search-model` with `model_type: "0-100"` (StaffingRole), `q: "<Position>"` | Roles as options for question 1; `role_id` for creation |
 | Branches | `search-model` with `model_type: "0-73"` (Branch) | Location options for question 2 |
 | Client staffing demand (Personalbedarf) | `search-model` with `model_type: "0-415"` (StaffingDemand), `q: "<Kunde oder Rolle>"`, then `get-model`. `0-102` (StaffingRequirement) is the legacy predecessor: read it only for old requests, never create in it | Pre-fill role (`staffing_role_id`), Einsatzort (`client_site_id`), start (`valid_from`), weekly hours and requirements; name the client in the posting only with permission |
-| Benefits catalogue | `list-model-types` (no parameters), find the type with „Benefit" in its name, then `search-model` with that `model_type` | Benefits as options for question 6, grouped by security, money, health, and leisure; ask question 6 normally if no such type exists |
+| Benefits catalogue | `get-model-schema` (no model_type) (no parameters), find the type with „Benefit" in its name, then `search-model` with that `model_type` | Benefits as options for question 6, grouped by security, money, health, and leisure; ask question 6 normally if no such type exists |
 | Style reference | `search-model` with `model_type: "0-80"` (Job), filter `is_active: true`, `per_page: 3`, then `get-model` on a job | Match the tone and structure of existing postings; do not copy them |
 
 If a call returns `MODULE_LOCKED`, tell the user in one sentence and continue without that
@@ -117,7 +117,7 @@ It returns `talent_hub_url`, whether the hub is enabled, whether the job is publ
 not expired, and `findings` (`error` or `warning` with field and message). `live: true` means no
 errors. Report every finding in plain language, fix what the job data can fix (`manage-model`
 update, preview first), and re-run. Only then show `talent_hub_url` as the final link and offer a
-hero photo (recipe via `get-tool-guidance` with `tool_names: ["manage-media"]`).
+hero photo (recipe via `search-docs` with `action: "tool-guidance"` and `tool_names: ["manage-media"]`).
 
 If the user wants to assign the job to a campaign, call `search-model` with `model_type:
 "0-191"` (JobPostingCampaign) and pass the ID as `job_posting_campaign_id`.

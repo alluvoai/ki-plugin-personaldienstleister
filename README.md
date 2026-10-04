@@ -40,8 +40,9 @@ Skill-Namen und Ablaufanweisungen sind auf Englisch. Deutsche Begriffe wie „ve
 | Faktura und offene Posten | `manage-invoices-and-payments` |
 | Recruiting und Personal | `onboard-new-employee`, `message-employee`, `manage-meta-ads` |
 | Vertrieb | `market-talent-profiles`, `setup-cold-outreach-mailbox`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `export-labor-market-data`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `call-prep`, `process-call-notes`, `log-company-signal`, `coordinate-sales` |
+| Website und Kampagnen | `analyze-website-performance` |
 | Service und Datenqualität | `manage-inbox`, `setup-talent-hub-chat`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities` |
-| Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator`, `setup-organization` |
+| Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator`, `setup-organization`, `check-out-session` |
 | Frei (ohne Konto) | `write-job-posting` |
 
 Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md). Jeder Workflow lässt sich auch direkt starten, zum Beispiel mit `/alluvo:bench-check`.
