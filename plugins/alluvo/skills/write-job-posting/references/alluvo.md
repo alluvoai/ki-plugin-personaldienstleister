@@ -117,7 +117,7 @@ It returns `talent_hub_url`, whether the hub is enabled, whether the job is publ
 not expired, and `findings` (`error` or `warning` with field and message). `live: true` means no
 errors. Report every finding in plain language, fix what the job data can fix (`manage-model`
 update, preview first), and re-run. Only then show `talent_hub_url` as the final link and offer a
-hero photo (recipe via `search-docs` with `action: "tool-guidance"` and `tool_names: ["manage-media"]`).
+hero photo (recipe via `search-docs` with `action: "tool-guidance"` and `tool_names: ["manage-file"]`).
 
 If the user wants to assign the job to a campaign, call `search-model` with `model_type:
 "0-191"` (JobPostingCampaign) and pass the ID as `job_posting_campaign_id`.

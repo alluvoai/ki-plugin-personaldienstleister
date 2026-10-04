@@ -36,12 +36,12 @@ Skill-Namen und Ablaufanweisungen sind auf Englisch. Deutsche Begriffe wie „ve
 |---|---|
 | Disposition | `bench-check`, `match-bench-to-clients`, `capture-staffing-request`, `manage-shift-schedules`, `record-absence`, `manage-timesheet-approvals`, `coordinate-staffing-operations` |
 | Belege und Reisekosten | `manage-reimbursements` |
-| Verträge | `manage-contract-lifecycle` |
+| Verträge | `manage-contract-lifecycle`, `manage-client-portal-access` |
 | Faktura und offene Posten | `manage-invoices-and-payments` |
 | Recruiting und Personal | `onboard-new-employee`, `message-employee`, `manage-meta-ads` |
-| Vertrieb | `market-talent-profiles`, `setup-cold-outreach-mailbox`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `export-labor-market-data`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `call-prep`, `process-call-notes`, `log-company-signal`, `coordinate-sales` |
+| Vertrieb | `market-talent-profiles`, `setup-cold-outreach-mailbox`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `process-call-notes`, `coordinate-sales` |
 | Website und Kampagnen | `analyze-website-performance` |
-| Service und Datenqualität | `manage-inbox`, `setup-talent-hub-chat`, `setup-booking-link`, `share-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities` |
+| Service und Datenqualität | `manage-inbox`, `setup-talent-hub-chat`, `setup-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities` |
 | Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator`, `setup-organization`, `check-out-session` |
 | Frei (ohne Konto) | `write-job-posting` |
 
