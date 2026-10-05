@@ -37,8 +37,8 @@ If the user supplies a finished posting (pasted text, file, or an existing job t
 published) and asks to publish it („Stellenanzeige veröffentlichen", „im Talent Hub
 ausschreiben"), do not rewrite it. Run Phase 0, then ask only for the fields the alluvo job
 still needs and the text does not state (usually location, placement type, contract type and
-working time, salary). Split the text into the short Markdown intro (`description`) and the
-three lists (tasks, profile, benefits). Skip Phase 1 and Phase 2, run Phase 3 on the given text and propose corrections
+working time, salary). Split the text into a short intro and the three lists (tasks, profile,
+benefits), as the `publish-job-posting` workflow describes. Skip Phase 1 and Phase 2, run Phase 3 on the given text and propose corrections
 as a diff the user approves, then go straight to Phase 4 option 2 with a preview
 (`confirmed: false`) before publishing. The HARD-GATE's headline-variant step does not apply
 here; the compliance check and the preview do.
@@ -48,11 +48,11 @@ text, run the normal flow and treat delivery option 2 as already chosen.
 
 ## Phase 0 — Context probe (silent, no follow-up)
 
-Check whether the alluvo assistant is connected: does an MCP tool `manage-settings` or
-`get-workflow-guidance` exist? If so, read the items in [references/alluvo.md](references/alluvo.md),
-section “Context reading”, **read-only**: formality (du/Sie), tone, company bio, taboo words,
-inclusivity rules, benefits, role catalogue, and, if the user named a staffing requirement,
-role, or company, the matching record. Published jobs are style references.
+Check whether the alluvo assistant is connected: does an MCP tool `get-workflow-guidance` or
+`manage-settings` exist? If so, follow [references/alluvo.md](references/alluvo.md): load the
+`publish-job-posting` workflow and run its context step **read-only**: formality (du/Sie), tone,
+company bio, taboo words, inclusivity rules, benefits, role catalogue, and, if the user named a
+staffing requirement, role, or company, the matching record. Published jobs are style references.
 
 If alluvo is not connected, that is not an error: turn the same points into interview
 questions, asking only those relevant to this posting.
@@ -67,8 +67,8 @@ order, but ask only questions that remain open. Ask at most seven questions, usu
 to five. Required questions without which no posting can be created: position and level,
 work location, placement type (Arbeitnehmerüberlassung, Direktvermittlung, eigene Stelle, or
 Freelance; skip when obvious from the request or the hub default), working-time model, and
-compensation. Map the answers to `contract_type`, `working_time` and `weekly_hours` as described
-in references/alluvo.md.
+compensation. When alluvo is connected, the `publish-job-posting` workflow maps the answers to
+the job's contract fields.
 
 If the user supplies an old posting or staffing requirement, extract everything from it
 first and ask only about gaps.
@@ -105,17 +105,13 @@ ask again; deliver exactly that way.
 1. **Als Datei speichern** (empfohlen, wenn ein Dateisystem da ist): Markdown, Dateiname
    `stellenanzeige-<position>-<ort>.md`.
 2. **In alluvo anlegen und im Talent Hub veröffentlichen**: offer only when alluvo is
-   connected. Follow [references/alluvo.md](references/alluvo.md), section “Create the job”:
-   check that the Talent Hub is enabled, write the lists into the structured fields and a short
-   Markdown intro into `description`, set `valid_through` only if the user names a date, preview
-   with `confirmed: false`, get confirmation, then `confirmed: true`. Afterwards run the
-   `check-public-page` action (Google-for-Jobs check), report its findings, fix and re-run, and
-   only then show the Talent Hub URL.
+   connected. Load `get-workflow-guidance(workflow: "publish-job-posting")` and follow it with
+   the approved text: it checks that the Talent Hub is enabled, creates the job with preview and
+   confirmation, runs the Google-for-Jobs check and only then shows the Talent Hub URL.
 3. **In alluvo anlegen und bei der Bundesagentur für Arbeit veröffentlichen**: offer only when
-   alluvo is connected **and** the Bundesagentur integration is set up (the
-   `publish-job-to-channel` action is then listed for the job). It needs the job from option 2.
-   Follow [references/alluvo.md](references/alluvo.md), section “Publish to the Bundesagentur”,
-   including the readiness checklist (postal code, BA occupation on the job or its role).
+   alluvo is connected **and** the Bundesagentur integration is set up. It needs the job from
+   option 2; the same `publish-job-posting` workflow carries the readiness checklist and the
+   publishing steps.
 4. **Kanalvarianten erzeugen**: Indeed, Bundesagentur (copy for manual entry, only when the
    channel above is not available), Meta-Ads short copy, social post, WhatsApp short version,
    using the formats in [references/structure.md](references/structure.md).
