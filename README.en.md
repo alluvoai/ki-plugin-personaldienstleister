@@ -95,7 +95,7 @@ Each workflow's trigger phrases are in the [catalogue](plugins/alluvo/README.md)
    ```
    codex mcp login alluvo
    ```
-   If the bundled server is not picked up, add it once by hand and sign in afterwards: `codex mcp add alluvo --url https://api.alluvo.ai/mcp`
+   If the bundled server is not picked up, add it once by hand and sign in afterwards: `codex mcp add alluvo --url https://api.alluvo.ai/mcp/plugin`
 
 Updating: `codex plugin marketplace upgrade`, then re-add the plugin.
 
@@ -108,7 +108,7 @@ Every MCP client can connect to the alluvo assistant directly; the plugin only a
 - **Your data stays with you.** The plugin contains no data and no instructions, only the trigger phrases. Everything else is served by the alluvo server at runtime, after sign-in, within your permissions and only for your organisation.
 - **A preview before every write.** No contract, shift or contact is created or changed until you have confirmed the preview.
 - **AÜG and ArbZG built in.** Shift plans are checked against maximum working time, rest periods and Sunday work; maximum assignment duration, equal pay and the §11 notification are part of the contract workflow.
-- **Plan boundaries are visible.** A workflow outside your alluvo plan answers `MODULE_LOCKED`, names the plan it needs and links to the trial.
+- **Switched-off apps are visible.** A workflow whose app is switched off in your organisation answers `APP_DISABLED` and says who can switch it on.
 
 ## Troubleshooting
 
@@ -116,7 +116,7 @@ Every MCP client can connect to the alluvo assistant directly; the plugin only a
 |---|---|
 | `alluvo … Needs authentication` in `/mcp` | Sign in via `/mcp` → alluvo. Tokens expire; signing in again fixes it. |
 | A workflow does not activate | Use a trigger phrase from the catalogue, or start the workflow explicitly: `/alluvo:bench-check`. |
-| `MODULE_LOCKED` | The workflow belongs to a module your organisation has not enabled. The message names the plan and links to the trial. |
+| `APP_DISABLED` | The workflow belongs to an app that is switched off in your organisation. An administrator switches it on under Settings → Apps. |
 
 ## About alluvo
 

@@ -95,7 +95,7 @@ Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md
    ```
    codex mcp login alluvo
    ```
-   Falls der mitgelieferte Server nicht übernommen wird, einmalig von Hand eintragen und danach anmelden: `codex mcp add alluvo --url https://api.alluvo.ai/mcp`
+   Falls der mitgelieferte Server nicht übernommen wird, einmalig von Hand eintragen und danach anmelden: `codex mcp add alluvo --url https://api.alluvo.ai/mcp/plugin`
 
 Aktualisieren: `codex plugin marketplace upgrade`, danach das Plugin erneut hinzufügen.
 
@@ -108,7 +108,7 @@ Jeder MCP-Client kann sich direkt mit dem alluvo-Assistenten verbinden; das Plug
 - **Ihre Daten bleiben bei Ihnen.** Das Plugin enthält keine Daten und keine Anleitungen, nur die Auslöse-Sätze. Alles Weitere liefert der alluvo-Server zur Laufzeit, nach Anmeldung, im Rahmen Ihrer Berechtigungen und nur für Ihre Organisation.
 - **Vorschau vor jedem Schreibzugriff.** Kein Vertrag, keine Schicht, kein Kontakt wird angelegt oder geändert, ohne dass Sie die Vorschau bestätigt haben.
 - **AÜG und ArbZG eingebaut.** Dienstpläne werden gegen Höchstarbeitszeit, Ruhezeiten und Sonntagsarbeit geprüft; Überlassungshöchstdauer, Equal Pay und die §11-Mitteilung sind Teil des Vertrags-Workflows.
-- **Tarifgrenzen sind sichtbar.** Ein Workflow außerhalb Ihres alluvo-Tarifs antwortet mit `MODULE_LOCKED`, nennt den nötigen Tarif und verlinkt die Testphase.
+- **Ausgeschaltete Apps sind sichtbar.** Ein Workflow, dessen App in Ihrer Organisation ausgeschaltet ist, antwortet mit `APP_DISABLED` und sagt, wer sie einschalten kann.
 
 ## Fehlerbehebung
 
@@ -116,7 +116,7 @@ Jeder MCP-Client kann sich direkt mit dem alluvo-Assistenten verbinden; das Plug
 |---|---|
 | `alluvo … Needs authentication` unter `/mcp` | Über `/mcp` → alluvo anmelden. Tokens laufen ab; eine erneute Anmeldung behebt es. |
 | Ein Workflow startet nicht | Die Auslöse-Formulierung aus dem Katalog verwenden oder den Workflow direkt starten: `/alluvo:bench-check`. |
-| `MODULE_LOCKED` | Der Workflow gehört zu einem Modul, das Ihre Organisation nicht freigeschaltet hat. Die Meldung nennt den Tarif und verlinkt die Testphase. |
+| `APP_DISABLED` | Der Workflow gehört zu einer App, die in Ihrer Organisation ausgeschaltet ist. Ein Administrator schaltet sie unter Einstellungen → Apps ein. |
 
 ## Über alluvo
 

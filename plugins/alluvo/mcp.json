@@ -3,7 +3,7 @@
     "mcpServers": {
         "alluvo": {
             "type": "streamable-http",
-            "url": "https://api.alluvo.ai/mcp"
+            "url": "https://api.alluvo.ai/mcp/plugin"
         }
     }
 }
