@@ -95,7 +95,7 @@ Die Auslöse-Sätze jedes Workflows stehen im [Katalog](plugins/alluvo/README.md
    ```
    codex mcp login alluvo
    ```
-   Falls der mitgelieferte Server nicht übernommen wird, einmalig von Hand eintragen und danach anmelden: `codex mcp add alluvo --url https://api.alluvo.ai/mcp/plugin`
+   Falls der mitgelieferte Server nicht übernommen wird, einmalig von Hand eintragen und danach anmelden: `codex mcp add alluvo --url https://mcp.alluvo.ai/mcp/plugin`
 
 Aktualisieren: `codex plugin marketplace upgrade`, danach das Plugin erneut hinzufügen.
 

@@ -95,7 +95,7 @@ Each workflow's trigger phrases are in the [catalogue](plugins/alluvo/README.md)
    ```
    codex mcp login alluvo
    ```
-   If the bundled server is not picked up, add it once by hand and sign in afterwards: `codex mcp add alluvo --url https://api.alluvo.ai/mcp/plugin`
+   If the bundled server is not picked up, add it once by hand and sign in afterwards: `codex mcp add alluvo --url https://mcp.alluvo.ai/mcp/plugin`
 
 Updating: `codex plugin marketplace upgrade`, then re-add the plugin.
 

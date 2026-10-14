@@ -21,7 +21,7 @@ has named or chosen the delivery format.
 ## How to ask
 
 - **One question per message.** Never send a questionnaire all at once.
-- **Use the environment's question tool** when one exists (in Claude Code,
+- **Use the environment's question tool** when one exists (for example
   `AskUserQuestion`): give 2–4 concrete options, with your recommendation first and
   „(empfohlen)". The user can always answer freely. If no such tool exists, ask the same
   question as text with numbered options.

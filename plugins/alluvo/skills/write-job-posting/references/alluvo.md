@@ -1,8 +1,8 @@
 # alluvo connection (optional)
 
 Applies only when the alluvo assistant (MCP server) is connected. Detect this when a tool
-`get-workflow-guidance` or `manage-settings` exists. In Claude Code, MCP tools often appear only
-after a tool search; search for `get-workflow-guidance` before assuming that no connection exists.
+`get-workflow-guidance` or `manage-settings` exists. Some clients load MCP tools only after a
+tool search; search for `get-workflow-guidance` before assuming that no connection exists.
 
 With alluvo connected, load the workflow `publish-job-posting` via
 `get-workflow-guidance(workflow: "publish-job-posting")` before reading context, creating the job,
