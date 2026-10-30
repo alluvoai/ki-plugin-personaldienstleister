@@ -112,17 +112,24 @@ ask again; deliver exactly that way.
    alluvo is connected **and** the Bundesagentur integration is set up. It needs the job from
    option 2; the same `publish-job-posting` workflow carries the readiness checklist and the
    publishing steps.
-4. **Kanalvarianten erzeugen**: Indeed, Bundesagentur (copy for manual entry, only when the
+4. **Bezahlte Anzeige schalten (StepStone, Indeed & Co. über Multiposting)**: offer only when
+   alluvo is connected. It needs the job from option 2. Load
+   `get-workflow-guidance(workflow: "advertise-job")` and follow it: it reads which channel
+   brings applicants and hires for this role, recommends channels with the basis and
+   confidence of each estimate, checks the job-ad budget, and books only after a preview of
+   the cost and the user's approval. Also the place to answer „Wo sollen wir die Stelle
+   schalten?".
+5. **Kanalvarianten erzeugen**: Indeed, Bundesagentur (copy for manual entry, only when the
    channel above is not available), Meta-Ads short copy, social post, WhatsApp short version,
    using the formats in [references/structure.md](references/structure.md).
    For a real Meta campaign, when alluvo is connected, call `get-workflow-guidance` with
    `workflow: "manage-meta-ads"` and follow its guidance.
-5. **Nur hier im Chat.**
+6. **Nur hier im Chat.**
 
-Without a filesystem and without alluvo, only options 4 and 5 remain.
+Without a filesystem and without alluvo, only options 5 and 6 remain.
 
 End with a short closing block: what was delivered, where it was delivered, which open risks
-from Phase 3 remain, and a suggested next step (for example „Meta-Kampagne dazu?", „Zweite
+from Phase 3 remain, and a suggested next step (for example „Bezahlte Anzeige dazu?", „Meta-Kampagne dazu?", „Zweite
 Variante für Teilzeit?").
 
 ## What you do not do

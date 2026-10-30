@@ -15,3 +15,9 @@ For Phase 0 the workflow's step 1 lists the read-only context sources: tone and 
 (du/Sie), company bio, taboo words, inclusivity rules, role catalogue, branches, benefits and a
 few published jobs as style references. The interview answers map to the job's contract fields
 there too.
+
+Where to advertise beyond the free channels — a paid ad on a job board (StepStone, Indeed and
+others through multiposting), which channel is worth it for the role, or the job-ad budget — is
+the workflow `advertise-job`: load `get-workflow-guidance(workflow: "advertise-job")` once the job
+exists. It recommends channels with the basis and confidence of each estimate and books only after
+a cost preview and the user's approval; this skill does not book anything itself.
