@@ -38,8 +38,8 @@ Skill names and procedural instructions are English. German terms such as “ver
 | Receipts and expenses | `manage-reimbursements` |
 | Contracts | `manage-contract-lifecycle`, `manage-client-portal-access` |
 | Invoicing and receivables | `manage-invoices-and-payments` |
-| Recruiting and HR | `onboard-new-employee`, `change-employer`, `message-employee`, `publish-job-posting`, `manage-meta-ads` |
-| Sales | `market-talent-profiles`, `setup-cold-outreach-mailbox`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `process-call-notes`, `coordinate-sales` |
+| Recruiting and HR | `onboard-new-employee`, `change-employer`, `message-employee`, `publish-job-posting`, `advertise-job`, `manage-meta-ads` |
+| Sales | `market-talent-profiles`, `setup-cold-outreach-mailbox`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `process-call-notes`, `coordinate-sales`, `manage-deals` |
 | Website and campaigns | `analyze-website-performance`, `plan-marketing-campaign` |
 | Service and data quality | `manage-inbox`, `setup-talent-hub-chat`, `setup-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities`, `manage-data-retention` |
 | Automation and overview | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator`, `setup-organization`, `check-out-session` |
