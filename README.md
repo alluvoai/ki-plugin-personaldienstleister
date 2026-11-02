@@ -40,7 +40,7 @@ Skill-Namen und Ablaufanweisungen sind auf Englisch. Deutsche Begriffe wie „ve
 | Faktura und offene Posten | `manage-invoices-and-payments` |
 | Recruiting und Personal | `onboard-new-employee`, `change-employer`, `message-employee`, `publish-job-posting`, `advertise-job`, `manage-meta-ads` |
 | Vertrieb | `market-talent-profiles`, `setup-cold-outreach-mailbox`, `prospect-companies`, `lead-radar-prospecting`, `research-staffing-agencies`, `manage-outreach-enrollments`, `define-icp`, `account-briefing`, `process-call-notes`, `coordinate-sales`, `manage-deals` |
-| Website und Kampagnen | `analyze-website-performance`, `plan-marketing-campaign` |
+| Website und Kampagnen | `build-company-website`, `edit-website`, `translate-website`, `suggest-landing-pages`, `analyze-website-performance`, `plan-marketing-campaign` |
 | Service und Datenqualität | `manage-inbox`, `setup-talent-hub-chat`, `setup-booking-link`, `triage-data-quality`, `merge-duplicate-records`, `enrich-contacts-from-activities`, `manage-data-retention` |
 | Automatisierung und Überblick | `build-automation-agent`, `daily-briefing`, `using-alluvo-operator`, `setup-organization`, `check-out-session` |
 | Frei (ohne Konto) | `write-job-posting` |
