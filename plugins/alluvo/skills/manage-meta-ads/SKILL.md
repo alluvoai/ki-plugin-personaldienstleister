@@ -1,6 +1,6 @@
 ---
 name: manage-meta-ads
-description: 'Manage Meta advertising end to end: campaigns, ad sets, creatives, audiences, automation rules, lead-form mapping, and Talent Hub Pixel/CAPI tracking. Use for "Werbeanzeigen", "Kampagnen-Performance prüfen", "Lead Ads erstellen", "Anzeige schalten", "Leads kommen nicht an", "Lead-Zuordnung" or "Conversion-Tracking".'
+description: 'Werbeanzeigen, Kampagnen-Performance, Lead Ads erstellen, Leads kommen nicht an — Meta campaigns, creatives, lead mapping, conversion tracking.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "manage-meta-ads"` and follow exactly what it returns.

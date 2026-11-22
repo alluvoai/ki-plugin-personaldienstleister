@@ -1,6 +1,6 @@
 ---
 name: setup-booking-link
-description: 'Create, configure, activate, repair, or share a booking link (MeetingBookingLink). Use for "Buchungslink anlegen", "Terminlink erstellen", "Kalender-Link einrichten", "Buchungslink aktivieren", "Buchungslink zeigt keine Termine", "Terminlink funktioniert nicht", and — for an existing link — "schick mir meinen Terminlink", "Kalender-Link teilen", "Buchungslink per Mail", "Link für die Website", "Buchungslink einbetten". German triggers also include: Terminlink reparieren, Terminlink schicken, Buchungslink abrufen.'
+description: 'Buchungslink anlegen, Terminlink erstellen, Buchungslink aktivieren, keine Termine, Terminlink schicken — create, repair or share a booking link.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "setup-booking-link"` and follow exactly what it returns.

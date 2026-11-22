@@ -1,6 +1,6 @@
 ---
 name: onboard-new-employee
-description: 'Onboard a newly added employee by checking completeness, sending and applying the digital personnel questionnaire, recording essential details, finding nearby placements, and managing self-service access. Use for "Mitarbeiter onboarden", "Personalfragebogen schicken", "Stammdaten übernehmen", "Bankverbindung anlegen", "Einladung versenden" or "Passwort zurücksetzen". Writing an employee a message is message-employee; shared-inbox ticket work belongs to manage-inbox.'
+description: 'Mitarbeiter onboarden, Personalfragebogen schicken, Stammdaten übernehmen, Passwort zurücksetzen — questionnaire, master data, bank, app access.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "onboard-new-employee"` and follow exactly what it returns.

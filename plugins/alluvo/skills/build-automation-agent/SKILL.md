@@ -1,6 +1,6 @@
 ---
 name: build-automation-agent
-description: 'Build or adjust an AI automation agent for schedules, inbox events, or multi-step workflows, and manage the instructions given to alluvo AI agents. Use for "Automatisierungs-Agent bauen", "KI-Bericht einrichten", "Agent auf einen Posteingang setzen", "Workflow mit Wartezeit", "Baustein anlegen", "Agenten-Prompt zeigen" or "Anweisungen ändern". German triggers also include: Agent auf Posteingang setzen, Prompt ändern.'
+description: 'Automatisierungs-Agent bauen, KI-Bericht einrichten, Agent auf Posteingang setzen, Prompt ändern — AI automation agents, schedules, instructions.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "build-automation-agent"` and follow exactly what it returns.

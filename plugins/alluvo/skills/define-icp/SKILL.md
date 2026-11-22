@@ -1,6 +1,6 @@
 ---
 name: define-icp
-description: 'Define, maintain, retrieve, or apply Ideal Customer Profiles for individual market segments and decision-maker personas. Use for "wer ist unser Wunschkunde", "ICP für Krankenhäuser definieren", "welche Unternehmen passen zu uns" or "Lead gegen ICP prüfen". German triggers also include: ICP definieren, Lead qualifizieren, Zielkundensegment, Entscheiderprofil.'
+description: 'Wunschkunde, ICP definieren, welche Unternehmen passen zu uns, Zielkundensegment — define and apply Ideal Customer Profiles.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "define-icp"` and follow exactly what it returns.

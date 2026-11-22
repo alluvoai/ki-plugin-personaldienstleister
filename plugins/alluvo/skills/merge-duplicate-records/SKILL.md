@@ -1,6 +1,6 @@
 ---
 name: merge-duplicate-records
-description: 'Find, preview, and merge duplicate company or contact records, including follow-up to a possible-duplicate warning. Use for "Dubletten bereinigen", "doppelte Firmen zusammenführen", "doppelte Kontakte zusammenführen", "Kontakt-Dublette" or "Standorte unter Muttergesellschaft gruppieren". German triggers also include: Standorte gruppieren.'
+description: 'Dubletten bereinigen, doppelte Firmen zusammenführen, doppelte Kontakte zusammenführen, Kontakt-Dublette — find, preview, merge duplicates.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "merge-duplicate-records"` and follow exactly what it returns.

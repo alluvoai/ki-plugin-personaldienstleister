@@ -1,6 +1,6 @@
 ---
 name: setup-organization
-description: 'Walk a new tenant through onboarding by reading manage-settings (group onboarding) and completing each open step with the matching MCP call — AÜG permit disclosure, first Niederlassung, priced Einsatzrollen, first client, first employee, Tarifwerk — or handing the operator a settings link for a step that is UI-only (logo, mailbox, calendar, integrations). Use for "Organisation einrichten", "alluvo einrichten", "Onboarding durchgehen", "Ersteinrichtung", "was fehlt noch im Setup" or "Setup abschließen".'
+description: 'Organisation einrichten, alluvo einrichten, Onboarding durchgehen, was fehlt noch im Setup — tenant onboarding step by step.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "setup-organization"` and follow exactly what it returns.

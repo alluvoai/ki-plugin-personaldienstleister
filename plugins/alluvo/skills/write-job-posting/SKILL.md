@@ -1,6 +1,6 @@
 ---
 name: write-job-posting
-description: Write or revise a job posting through a short guided interview, offer headline choices, and check the result for AGG, AÜG, pay-transparency, and GDPR requirements. Use for "Stellenanzeige schreiben", "Stellenausschreibung erstellen", "Jobanzeige texten", "Stellenanzeige überarbeiten", "Anzeige AGG-konform machen", "Stellenanzeige veröffentlichen" or "im Talent Hub ausschreiben"; an already finished text skips the interview and goes straight to the check and publishing. It works without an alluvo account and can use connected alluvo company settings and publishing tools when available.
+description: Stellenanzeige schreiben, Stellenausschreibung erstellen, Stellenanzeige überarbeiten, Anzeige AGG-konform machen, Stellenanzeige veröffentlichen, im Talent Hub ausschreiben — write or check a job posting (AGG, AÜG, pay transparency); works without an alluvo account.
 summary: Write or revise a compliant job posting through a guided interview.
 triggers: Stellenanzeige schreiben, Stellenausschreibung erstellen, Stellenanzeige veröffentlichen, im Talent Hub ausschreiben, Stellenanzeige überarbeiten, Anzeige AGG-konform machen
 aliases: stellenanzeige

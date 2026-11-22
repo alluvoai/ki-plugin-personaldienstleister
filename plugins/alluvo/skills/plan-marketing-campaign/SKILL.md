@@ -1,6 +1,6 @@
 ---
 name: plan-marketing-campaign
-description: 'Plan a marketing campaign, store it in alluvo and hand back tracked UTM links per channel, then measure it. Use for "Kampagne planen", "neue Kampagne anlegen", "UTM-Links erstellen", "Tracking-Links für LinkedIn", "QR-Code-Link für Flyer", "wie lief die Kampagne", "Kampagnenlinks", "Kampagne auswerten". Reading general traffic belongs to analyze-website-performance, Meta ads to manage-meta-ads.'
+description: 'Kampagne planen, Kampagne anlegen, UTM-Links, Kampagne auswerten — campaign record, validated UTM links, performance per campaign.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "plan-marketing-campaign"` and follow exactly what it returns.

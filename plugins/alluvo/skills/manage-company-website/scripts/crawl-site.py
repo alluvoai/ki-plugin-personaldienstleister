@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Inventory every URL of an existing company website before rebuilding it on alluvo (workflow build-company-website).
+"""Inventory every URL of an existing company website before rebuilding it on alluvo (workflow manage-company-website, section build-or-migrate).
 
 Usage:
     python3 crawl-site.py https://www.example-personal.de [--max-pages 500] [--out urls.json] [--render]
