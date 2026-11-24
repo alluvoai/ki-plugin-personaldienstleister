@@ -22,7 +22,8 @@ Skill names and procedural instructions are English. German terms such as “ver
 | "Who is on the bench right now?" | lists employees without an assignment, ranked by urgency, with home town and qualification |
 | "Find assignments for the bench" | matches available employees to clients with a framework contract and drafts assignment contracts |
 | "Sell the candidate Max Mustermann" | finds matching companies nearby, qualifies them and starts the outreach sequence |
-| "New staffing request from Klinikum Musterstadt" | captures the request completely and proposes candidates |
+| "New staffing request from Klinikum Musterstadt" | captures the request completely and hands it over to working the demand |
+| "Where does the demand stand, who fits?" | with the staffing demand hub, shows seats, the responsible person and the staffing plan and proposes profiles — nothing is sent before your approval |
 | "Create the October shift plan" | plans the shifts with ArbZG checks and publishes them |
 | "Sick note for Ms Beispiel from Monday" | books the absence and files the certificate in the personnel record |
 | "Review the submitted hours" | shows submitted hours, deviations and open client approvals |
@@ -34,7 +35,7 @@ Skill names and procedural instructions are English. German terms such as “ver
 
 | Area | Workflows |
 |---|---|
-| Dispatching | `bench-check`, `match-bench-to-clients`, `capture-staffing-request`, `manage-shift-schedules`, `record-absence`, `manage-timesheet-approvals`, `coordinate-staffing-operations` |
+| Dispatching | `bench-check`, `match-bench-to-clients`, `capture-staffing-request`, `manage-staffing-demand`, `manage-shift-schedules`, `record-absence`, `manage-timesheet-approvals`, `coordinate-staffing-operations` |
 | Receipts and expenses | `manage-reimbursements` |
 | Contracts | `manage-contract-lifecycle`, `manage-client-portal-access` |
 | Invoicing and receivables | `manage-invoices-and-payments` |

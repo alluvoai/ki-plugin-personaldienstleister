@@ -1,6 +1,6 @@
 ---
 name: capture-staffing-request
-description: 'neuer Personalbedarf, Anfrage aufnehmen, Kundenbedarf erfassen, Stelle anlegen, Abteilung archivieren — staffing request, departments; call notes: process-call-notes.'
+description: 'neuer Personalbedarf, Anfrage aufnehmen, Kundenbedarf erfassen, Stelle anlegen, Abteilung archivieren — capture a new staffing request; departments.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "capture-staffing-request"` and follow exactly what it returns.

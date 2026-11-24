@@ -1,6 +1,6 @@
 # alluvo – KI-Plugin für Personaldienstleister
 
-Guided workflows for alluvo staffing-agency operators. Version 1.27.0.
+Guided workflows for alluvo staffing-agency operators. Version 1.27.3.
 
 The workflows are **served by the alluvo MCP server**, not shipped in this
 repository: this plugin carries the trigger phrases, the assistant carries the
@@ -32,7 +32,7 @@ connecting the assistant without the plugin.
 | `analyze-website-performance` | Wie läuft die Kampagne, Web-Analyse, Website-Statistik, Absprungrate, Wer ist gerade auf der Website — web and Talent Hub analytics, funnel, Web Vitals. |
 | `bench-check` | wer ist verleihfrei, Bank prüfen, wer hat keinen Einsatz, wessen Einsatz läuft aus, freie Mitarbeiter — who is unassigned now or soon, by urgency. |
 | `build-automation-agent` | Automatisierungs-Agent bauen, KI-Bericht einrichten, Agent auf Posteingang setzen, Prompt ändern — AI automation agents, schedules, instructions. |
-| `capture-staffing-request` | neuer Personalbedarf, Anfrage aufnehmen, Kundenbedarf erfassen, Stelle anlegen, Abteilung archivieren — staffing request, departments; call notes: process-call-notes. |
+| `capture-staffing-request` | neuer Personalbedarf, Anfrage aufnehmen, Kundenbedarf erfassen, Stelle anlegen, Abteilung archivieren — capture a new staffing request; departments. |
 | `change-employer` | Arbeitgeberwechsel, Gesellschaft wechseln, in andere GmbH versetzen, Mitarbeiter umhängen — move an employee to another GmbH of the group. |
 | `check-out-session` | Session auschecken, Session an die Entwickler übergeben, Session exportieren — hand this AI session and its transcript to the alluvo developers. |
 | `coordinate-sales` | Vertriebsübersicht, Umsatzprognose, Forecast, Pipeline-Review, BDRs koordinieren — pipeline, forecast, BDR performance, delegated sales work. |
@@ -52,6 +52,7 @@ connecting the assistant without the plugin.
 | `manage-outreach-enrollments` | Unternehmen in Sequenz aufnehmen, Outreach starten, Sequenz pausieren, aus Sequenz entfernen — outreach sequence enrollments. |
 | `manage-reimbursements` | Beleg einreichen, Belege abgleichen, doppelt eingereicht, Spesen freigeben, Reisekosten prüfen — receipts and travel expenses: file, approve, pay. |
 | `manage-shift-schedules` | Dienstplan erstellen, Schichten anlegen, Schicht stornieren, Schicht umbesetzen, Dienstplan veröffentlichen — compliant shift schedules. |
+| `manage-staffing-demand` | Bedarf bearbeiten, Personalbedarf bearbeiten, Personalbedarf managen — work an existing staffing demand: status, Besetzungsplan, fitting people, profile proposals. |
 | `manage-timesheet-approvals` | Stundenfreigabe, Stundenzettel prüfen, Stunden genehmigen, Stundenkorrektur, falscher Unterzeichner, Freigabe zurücknehmen — review, release, correct timesheets. |
 | `market-talent-profiles` | Profilvertrieb, Mitarbeiter platzieren, Bank vermarkten, Kandidatenprofil verschicken — market one available employee to target companies. |
 | `match-bench-to-clients` | matche die Bank, Einsätze für verleihfreie Mitarbeiter, wer passt zu welchem Kunden, Bestandskunden matchen — bench to existing clients. |

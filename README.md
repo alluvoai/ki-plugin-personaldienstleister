@@ -22,7 +22,8 @@ Skill-Namen und Ablaufanweisungen sind auf Englisch. Deutsche Begriffe wie „ve
 | „Wer ist gerade verleihfrei?" | listet Mitarbeiter ohne Einsatz, nach Dringlichkeit, mit Wohnort und Qualifikation |
 | „Finde Einsätze für die Bank" | matcht verleihfreie Mitarbeiter auf Kunden mit Rahmenvertrag und legt Einsatzvertragsentwürfe an |
 | „Verkauf mir den Kandidaten Max Mustermann" | sucht passende Firmen im Umkreis, qualifiziert sie und startet die Outreach-Sequenz |
-| „Neuer Personalbedarf von Klinikum Musterstadt" | erfasst die Anfrage vollständig und schlägt Kandidaten vor |
+| „Neuer Personalbedarf von Klinikum Musterstadt" | erfasst die Anfrage vollständig und übergibt sie an die Bearbeitung des Bedarfs |
+| „Wie steht es um den Bedarf, wer passt?" | zeigt mit der Personalbedarf-Übersicht Plätze, Verantwortliche und Besetzungsplan und schlägt Profile vor — versendet wird erst nach Ihrer Freigabe |
 | „Dienstplan für Oktober erstellen" | plant die Schichten mit ArbZG-Prüfung und veröffentlicht sie |
 | „Krankmeldung für Frau Beispiel ab Montag" | bucht die Abwesenheit und legt die AU in die Personalakte |
 | „Stundenfreigabe prüfen" | zeigt eingereichte Stunden, Abweichungen und offene Kundenfreigaben |
@@ -34,7 +35,7 @@ Skill-Namen und Ablaufanweisungen sind auf Englisch. Deutsche Begriffe wie „ve
 
 | Bereich | Workflows |
 |---|---|
-| Disposition | `bench-check`, `match-bench-to-clients`, `capture-staffing-request`, `manage-shift-schedules`, `record-absence`, `manage-timesheet-approvals`, `coordinate-staffing-operations` |
+| Disposition | `bench-check`, `match-bench-to-clients`, `capture-staffing-request`, `manage-staffing-demand`, `manage-shift-schedules`, `record-absence`, `manage-timesheet-approvals`, `coordinate-staffing-operations` |
 | Belege und Reisekosten | `manage-reimbursements` |
 | Verträge | `manage-contract-lifecycle`, `manage-client-portal-access` |
 | Faktura und offene Posten | `manage-invoices-and-payments` |
