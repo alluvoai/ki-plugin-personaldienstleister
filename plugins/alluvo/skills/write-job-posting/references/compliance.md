@@ -4,6 +4,22 @@ Check every item, show findings in a table (check, finding, correction), apply c
 the text, and name open risks. This check is not legal advice; it catches errors that are most
 often warned against or challenged in practice.
 
+## Hard rules for the variants
+
+Apply these while writing the title and opening variants of Phase 2, before the user sees
+them. A variant that breaks one is rewritten, never shown with a note. The full check below
+runs again on the finished text.
+
+| Rule | What to watch |
+|---|---|
+| Gender (AGG) | (m/w/d) or a neutral form in the title, **and** no masculine-only reference after it: pronouns, relative clauses and nouns that refer to the applicant. „Staplerfahrer (m/w/d), der gern rückwärts einparkt" breaks the rule; „Staplerfahrer (m/w/d) mit Freude am Rückwärtseinparken" or „Du parkst gern rückwärts ein?" does not. |
+| Humour and wordplay | Puns, rhymes and scenes slip into masculine forms easily („der Mann für …", „echter Kerl", „Ihr neuer Kollege"). Read every creative variant once for this alone. |
+| Age, origin, language | No age wording („junges Team", „Digital Native"), no „Muttersprache"; see AGG below. |
+| No unconfirmed benefits | Only benefits, team traits and promises the user or alluvo context confirmed. „Ein Team, das Sie vom ersten Tag an einarbeitet" is a promise; leave it out unless confirmed. |
+| Salary and location | Only the figures and place the user gave; no invented range or city. |
+| No client name | For Arbeitnehmerüberlassung, no client name unless the user said the client allows it. |
+| No superlatives | No „Top-Arbeitgeber", „marktführend", „bestbezahlt" without evidence. |
+
 ## AGG (Allgemeines Gleichbehandlungsgesetz)
 
 | Check | Rule |

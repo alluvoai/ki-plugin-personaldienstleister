@@ -76,9 +76,12 @@ first and ask only about gaps.
 ## Phase 2 — Variants, then full text
 
 1. Offer **two to three variants** for the title and opening paragraph that differ in
-   attitude (for example factual-confident, warm-team-oriented, direct-modern). Show them
-   side by side, state your recommendation and why, then use the question tool to ask which
-   one to use.
+   attitude (for example factual-confident, warm-team-oriented, direct-modern). **Write them
+   within the hard rules from the start**, so every variant can be chosen as it stands:
+   check each one against [references/compliance.md](references/compliance.md), section
+   *Hard rules for the variants*, before you show it, and rewrite every variant that breaks a
+   rule. Never show a variant and correct it later. Show them side by side, state your
+   recommendation and why, then use the question tool to ask which one to use.
 2. Write the full text using [references/structure.md](references/structure.md): title with
    (m/w/d), opening, responsibilities, profile, benefits, framework (place, time,
    compensation, placement form), application, and contact. Use an industry template when
@@ -89,7 +92,8 @@ first and ask only about gaps.
 
 ## Phase 3 — Compliance check
 
-Check the text against [references/compliance.md](references/compliance.md) and show the
+This is the final check of the whole text. The variants were already written within the hard
+rules (Phase 2); check the full text against [references/compliance.md](references/compliance.md) and show the
 result as a table: check, finding, correction. Correct every finding in the text before
 continuing. Name anything that cannot be fixed (for example a missing salary because the
 user does not want to provide one) as an open risk, with one sentence explaining why it is
@@ -106,8 +110,10 @@ ask again; deliver exactly that way.
    `stellenanzeige-<position>-<ort>.md`.
 2. **In alluvo anlegen und im Talent Hub veröffentlichen**: offer only when alluvo is
    connected. Load `get-workflow-guidance(workflow: "publish-job-posting")` and follow it with
-   the approved text: it checks that the Talent Hub is enabled, creates the job with preview and
-   confirmation, runs the Google-for-Jobs check and only then shows the Talent Hub URL.
+   the approved text: it checks that the Talent Hub is enabled, creates the job as a draft with
+   preview and confirmation, gives the user a preview link of the page as applicants will see
+   it (valid 7 days, forwardable for approval), publishes only after the user approved it, runs
+   the Google-for-Jobs check and only then shows the Talent Hub URL.
 3. **In alluvo anlegen und bei der Bundesagentur für Arbeit veröffentlichen**: offer only when
    alluvo is connected **and** the Bundesagentur integration is set up. It needs the job from
    option 2; the same `publish-job-posting` workflow carries the readiness checklist and the
