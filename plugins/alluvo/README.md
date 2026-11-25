@@ -1,6 +1,6 @@
 # alluvo – KI-Plugin für Personaldienstleister
 
-Guided workflows for alluvo staffing-agency operators. Version 1.31.0.
+Guided workflows for alluvo staffing-agency operators. Version 1.31.1.
 
 The workflows are **served by the alluvo MCP server**, not shipped in this
 repository: this plugin carries the trigger phrases, the assistant carries the
@@ -52,7 +52,7 @@ connecting the assistant without the plugin.
 | `manage-outreach-enrollments` | Unternehmen in Sequenz aufnehmen, Outreach starten, Sequenz pausieren, aus Sequenz entfernen — outreach sequence enrollments. |
 | `manage-reimbursements` | Beleg einreichen, Belege abgleichen, doppelt eingereicht, Spesen freigeben, Reisekosten prüfen — receipts and travel expenses: file, approve, pay. |
 | `manage-shift-schedules` | Dienstplan erstellen, Schichten anlegen, Schicht stornieren, Schicht umbesetzen, Dienstplan veröffentlichen — compliant shift schedules. |
-| `manage-staffing-demand` | Bedarf bearbeiten, Personalbedarf bearbeiten, Personalbedarf managen — work an existing staffing demand: status, Besetzungsplan, fitting people, profile proposals. |
+| `manage-staffing-demand` | Bedarf bearbeiten, Personalbedarf bearbeiten, Personalbedarf managen — work an existing staffing demand: status, next steps, fitting people, profile proposals, job postings. |
 | `manage-timesheet-approvals` | Stundenfreigabe, Stundenzettel prüfen, Stunden genehmigen, Stundenkorrektur, falscher Unterzeichner, Freigabe zurücknehmen — review, release, correct timesheets. |
 | `market-talent-profiles` | Profilvertrieb, Mitarbeiter platzieren, Bank vermarkten, Kandidatenprofil verschicken — market one available employee to target companies. |
 | `match-bench-to-clients` | matche die Bank, Einsätze für verleihfreie Mitarbeiter, wer passt zu welchem Kunden, Bestandskunden matchen — bench to existing clients. |

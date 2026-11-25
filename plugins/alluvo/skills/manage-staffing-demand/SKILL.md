@@ -1,6 +1,6 @@
 ---
 name: manage-staffing-demand
-description: 'Bedarf bearbeiten, Personalbedarf bearbeiten, Personalbedarf managen — work an existing staffing demand: status, Besetzungsplan, fitting people, profile proposals.'
+description: 'Bedarf bearbeiten, Personalbedarf bearbeiten, Personalbedarf managen — work an existing staffing demand: status, next steps, fitting people, profile proposals, job postings.'
 ---
 
 Call the MCP tool `get-workflow-guidance` with `workflow: "manage-staffing-demand"` and follow exactly what it returns.
